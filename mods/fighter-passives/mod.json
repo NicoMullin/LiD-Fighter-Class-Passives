@@ -1,0 +1,162 @@
+{
+  "id": "fighter-passives",
+  "name": "Fighter Class Passives",
+  "description": "Give each fighter class a skill decal that is always on, without taking a decal slot, and optionally the full pause-map reveal. Adds its own passive hook to BrgGame.upk; the map reveals also need dinput8.dll - see the readme.",
+  "version": "0.2.0",
+  "author": "KSFA",
+  "category": "Game content",
+  "tags": [
+    "fighters",
+    "decals",
+    "passives",
+    "map"
+  ],
+  "game_version": [
+    "5.0.4.1.0 - 1.89"
+  ],
+  "apply": "diff",
+  "requires": [],
+  "conflicts_with": [],
+  "settings": [
+    {
+      "id": "bal_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "All-rounder",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "bal_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "All-rounder",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    },
+    {
+      "id": "bre_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "Striker",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "bre_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "Striker",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    },
+    {
+      "id": "col_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "Collector",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "col_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "Collector",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    },
+    {
+      "id": "tec_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "Attacker",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "tec_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "Attacker",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    },
+    {
+      "id": "def_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "Defender",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "def_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "Defender",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    },
+    {
+      "id": "sht_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "Shooter",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "sht_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "Shooter",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    },
+    {
+      "id": "luk_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "Lucky Star",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "luk_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "Lucky Star",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    },
+    {
+      "id": "ski_skill",
+      "label": "Passive decal",
+      "type": "choice",
+      "group": "Skill Master",
+      "default": "",
+      "options_from": "decals.json"
+    },
+    {
+      "id": "ski_map",
+      "label": "Reveal everything on the pause map",
+      "type": "toggle",
+      "group": "Skill Master",
+      "default": false,
+      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+    }
+  ],
+  "patches": [
+    {
+      "type": "raw_sql_file",
+      "path": "passives.sql",
+      "description": "Class passives and map reveals"
+    },
+    {
+      "type": "tfc_installer",
+      "source": "tfc",
+      "description": "The passive hook in BrgGame.upk"
+    }
+  ]
+}

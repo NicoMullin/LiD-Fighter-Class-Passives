@@ -1,0 +1,1837 @@
+[
+ {
+  "value": "",
+  "label": "None",
+  "help": "No passive decal for this class."
+ },
+ {
+  "value": "SKL_ATKUP_02",
+  "label": "Barbell",
+  "group": "Athleticism-related",
+  "help": "Increase ATK by 15%."
+ },
+ {
+  "value": "SKL_DEFUP_02",
+  "label": "Diamond",
+  "group": "Athleticism-related",
+  "help": "Increase DEF by 20%."
+ },
+ {
+  "value": "SKL_ATK_CRIATK_MONEYUP_P",
+  "label": "Dog Day Afternoon",
+  "group": "Athleticism-related",
+  "help": "ATK power and critical hit damage increase by 15%, and the amount of Kill Coins obtained from enemies and treasures increases by 30%."
+ },
+ {
+  "value": "SKL_ATKUP_01",
+  "label": "Dumbbell",
+  "group": "Athleticism-related",
+  "help": "Increase ATK by 7%."
+ },
+ {
+  "value": "SKL_NDFALL_AUSTEALTH",
+  "label": "Dusty",
+  "group": "Athleticism-related",
+  "help": "Nullifies fall damage and boosts stealth Suplex attacks by 30%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DEFUP_01",
+  "label": "Emerald",
+  "group": "Athleticism-related",
+  "help": "Increase DEF by 10%."
+ },
+ {
+  "value": "SKL_STRENGTHEN_BODY_B_P",
+  "label": "Extra Joker",
+  "group": "Athleticism-related",
+  "help": "Increase ATK by 15%, crit chance by 10%. Rate at which stamina decreases during Dodge, Dash and Fatigue Time decrease by 30%. 10% chance to nullify damage when attacked. (Excludes fire damage, etc.)"
+ },
+ {
+  "value": "SKL_CRIUP_02",
+  "label": "Five-leaf Clover",
+  "group": "Athleticism-related",
+  "help": "Increase crit chance by 20%."
+ },
+ {
+  "value": "SKL_CRIUP_01",
+  "label": "Four-leaf Clover",
+  "group": "Athleticism-related",
+  "help": "Increase crit chance by 10%."
+ },
+ {
+  "value": "SKL_STMNUP_02",
+  "label": "Gold Heart",
+  "group": "Athleticism-related",
+  "help": "Increase max stamina by 80%."
+ },
+ {
+  "value": "SKL_ATKUP_03_P",
+  "label": "Golden Gym",
+  "group": "Athleticism-related",
+  "help": "Increase ATK by 30%."
+ },
+ {
+  "value": "SKL_DODGEUP_01",
+  "label": "Gymnast",
+  "group": "Athleticism-related",
+  "help": "Rate at which stamina decreases during Dodge goes down by 30%."
+ },
+ {
+  "value": "SKL_HPUP_02",
+  "label": "Heavy Tank",
+  "group": "Athleticism-related",
+  "help": "Increase max HP by 40%."
+ },
+ {
+  "value": "SKL_HENRY_NMH_P",
+  "label": "HENRY",
+  "group": "Athleticism-related",
+  "help": "Decreases Dash stamina consumption and Fatigue time by 30% and decreases Dodge stamina consumption by 30%. Plus, boosts Atk by 30% after a Perfect Guard. (Resets after one attack.)"
+ },
+ {
+  "value": "SKL_STRENGTHEN_BODY_01_P",
+  "label": "Joker",
+  "group": "Athleticism-related",
+  "help": "Increases max HP by 20%, Attack Power by 15%, Defense by 15%, max stamina by 50%, and boosts Rage Gauge charging speed by 50%."
+ },
+ {
+  "value": "SKL_DEFUP_DEATH_PROOF_P",
+  "label": "Kali Angel",
+  "group": "Athleticism-related",
+  "help": "Boosts DEF by 15% and enables you to survive one fatal attack with 1 HP. This limit resets when you continue or return to the Waiting Room. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_RGSPDUP_02",
+  "label": "King of the Wolves",
+  "group": "Athleticism-related",
+  "help": "Increase rage gauge build-up by 80%."
+ },
+ {
+  "value": "SKL_RGSPUP_RDURDOWN_01_P",
+  "label": "King of the Wolves Ⅱ",
+  "group": "Athleticism-related",
+  "help": "Increases Rage Gauge build-up by 120%, reduces durability loss rate during Rage Moves by 30%."
+ },
+ {
+  "value": "SKL_DODGEUP_03_P",
+  "label": "Legendary Gymnast",
+  "group": "Athleticism-related",
+  "help": "Rate at which stamina decreases during Dodge goes down by 80%."
+ },
+ {
+  "value": "SKL_STMUP_DASHDODGE_P",
+  "label": "Lunar Style",
+  "group": "Athleticism-related",
+  "help": "Reduces stamina consumption and fatigue time by 30% when dashing and stamina consumption by 30% when dodging. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_SPDUP_02",
+  "label": "Marathon Runner",
+  "group": "Athleticism-related",
+  "help": "Rate at which stamina decreases during Dash and Fatigue Time decrease by 50%."
+ },
+ {
+  "value": "SKL_MFS_KUN",
+  "label": "MFS-Kun",
+  "group": "Athleticism-related",
+  "help": "Increase rage gauge build-up by 20%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DISALL_ATKUP_HPDWN_P",
+  "label": "One Way Ticket",
+  "group": "Athleticism-related",
+  "help": "ATK increases by 40%, and all stats required to equip weapons and armor become 80%, but HP decreases by 30%."
+ },
+ {
+  "value": "SKL_HPUP_ATKUP_P",
+  "label": "Panther Mode",
+  "group": "Athleticism-related",
+  "help": "Boosts max HP by 20% and ATK by 5%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DODGEUP_02",
+  "label": "Professional Gymnast",
+  "group": "Athleticism-related",
+  "help": "Rate at which stamina decreases during Dodge goes down by 50%."
+ },
+ {
+  "value": "SKL_RG_STARTUP_SPDUP_P",
+  "label": "Raven",
+  "group": "Athleticism-related",
+  "help": "Boosts Rage Gauge charging speed by 50% and grants a single bonus of Rage Gauge +1 at the start of a Raid or when using an elevator or escalator. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DEFUP_03_P",
+  "label": "Red Diamond",
+  "group": "Athleticism-related",
+  "help": "Increase DEF by 40%."
+ },
+ {
+  "value": "SKL_STMNUP_01",
+  "label": "Silver Heart",
+  "group": "Athleticism-related",
+  "help": "Increase max stamina by 50%."
+ },
+ {
+  "value": "SKL_CRIUP_03_P",
+  "label": "Six-leaf Clover",
+  "group": "Athleticism-related",
+  "help": "Increase crit chance by 30%."
+ },
+ {
+  "value": "SKL_ATKUP_CRIUP_DEFDWN_P",
+  "label": "Special Unit Captain",
+  "group": "Athleticism-related",
+  "help": "Increase ATK by 40%. Increase crit chance by 10%, but reduce DEF by 30%."
+ },
+ {
+  "value": "SKL_SPDUP_01",
+  "label": "Sprinter",
+  "group": "Athleticism-related",
+  "help": "Rate at which stamina decreases during Dash and Fatigue Time decrease by 30%."
+ },
+ {
+  "value": "SKL_HPUP_03_P",
+  "label": "Super Heavy Tank",
+  "group": "Athleticism-related",
+  "help": "Increase max HP by 60%."
+ },
+ {
+  "value": "SKL_HPUP_01",
+  "label": "Tank",
+  "group": "Athleticism-related",
+  "help": "Increase max HP by 20%."
+ },
+ {
+  "value": "SKL_FIGHTER_STUP_01_P",
+  "label": "Ultimate Fighter",
+  "group": "Athleticism-related",
+  "help": "Increases fighters all basic parameters by 10%."
+ },
+ {
+  "value": "SKL_FIGHTER_STUP_02_P",
+  "label": "Ultimate Fighter's Return",
+  "group": "Athleticism-related",
+  "help": "Increases fighters all basic parameters by 20%."
+ },
+ {
+  "value": "SKL_SPDUP_03_P",
+  "label": "Ultra-Marathon Man",
+  "group": "Athleticism-related",
+  "help": "Rate at which stamina decreases during Dash and Fatigue Time decrease by 80%."
+ },
+ {
+  "value": "SKL_ATKUP_DEFUP_00_P",
+  "label": "Uncle-D2",
+  "group": "Athleticism-related",
+  "help": "Increases ATK and DEF by 10%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_RGSPDUP_01",
+  "label": "Wolf",
+  "group": "Athleticism-related",
+  "help": "Increase rage gauge build-up by 50%."
+ },
+ {
+  "value": "SKL_HPUP_WOT_P",
+  "label": "World of Tanks",
+  "group": "Athleticism-related",
+  "help": "Increase max HP by 45%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_HPCUREUP_03_P",
+  "label": "Apple",
+  "group": "Quest Support",
+  "help": "Increases HP recovery by 15%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_CRIUP_DECDOWN_02_P",
+  "label": "Blacksmith",
+  "group": "Quest Support",
+  "help": "Boosts critical hit rate by 15% and reduces weapon/armor weardown speed by 30%."
+ },
+ {
+  "value": "SKL_COYOTE_SMITH_K7_P",
+  "label": "Coyote Smith",
+  "group": "Quest Support",
+  "help": "Reveals all the undiscovered items on the map and increases amount of Kill Coins obtained from enemies or chests by 15%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DISCOUNT_DEX",
+  "label": "Dexterity Discount",
+  "group": "Quest Support",
+  "help": "Halves the DEX necessary to equip weapons and/or armor."
+ },
+ {
+  "value": "SKL_CRIUP_DECDUR_DOWN_P",
+  "label": "Durga Angel",
+  "group": "Quest Support",
+  "help": "Boosts critical hit rate by 15% and reduces weapon/armor weardown speed by 10%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ELECTROBEAST_P",
+  "label": "Electro Beast",
+  "group": "Quest Support",
+  "help": "Decreases the duration of paralysis when electrocuted. Increases the ATK of electric weapons by 30%. Increases Shock Res by 20%."
+ },
+ {
+  "value": "SKL_DISCOUNT_ALL_P",
+  "label": "Everything's On Sale",
+  "group": "Quest Support",
+  "help": "All stat requirements for weapons and armor become 80%."
+ },
+ {
+  "value": "SKL_FIREANGEL_P",
+  "label": "Fire Angel",
+  "group": "Quest Support",
+  "help": "Decreases the duration of continuous damage taken when on fire. Increases the ATK of fire weapons by 30%. Increases Fire Res by 20%."
+ },
+ {
+  "value": "SKL_FASTEAT_P",
+  "label": "Food Fighter",
+  "group": "Quest Support",
+  "help": "Eat faster."
+ },
+ {
+  "value": "SKL_DISCOUNT_HP",
+  "label": "Health Discount",
+  "group": "Quest Support",
+  "help": "Halves the HP necessary to equip weapons and/or armor."
+ },
+ {
+  "value": "SKL_STEALTHUP",
+  "label": "Hide and Seek",
+  "group": "Quest Support",
+  "help": "You are harder for enemies to detect while crouching."
+ },
+ {
+  "value": "SKL_IWAZARU_K7_P",
+  "label": "Iwazaru",
+  "group": "Quest Support",
+  "help": "Reveals all the undiscovered escalators and elevators, etc. on the map. Also, increases amount of obtained SPLithium by 15%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_JEANE_NMH_P",
+  "label": "JEANE",
+  "group": "Quest Support",
+  "help": "Sets all equip requirements to 90% and boosts Atk +50% for Stealth Backdrop attacks."
+ },
+ {
+  "value": "SKL_LILYBERGAMO_P",
+  "label": "Lily Bergamo",
+  "group": "Quest Support",
+  "help": "No effect. Can be sold for 10,000 Kill Coins. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DECDUR_DOWN_01",
+  "label": "Long Tail",
+  "group": "Quest Support",
+  "help": "Reduces the durability loss of equipment and weapons by 5%."
+ },
+ {
+  "value": "SKL_DISCOUNT_LUK",
+  "label": "Luck Discount",
+  "group": "Quest Support",
+  "help": "Halves the LUK necessary to equip weapons and/or armor."
+ },
+ {
+  "value": "SKL_EXPLODE_ENEMYKILL_P",
+  "label": "Mad Bomber",
+  "group": "Quest Support",
+  "help": "Defeated enemies blow up, causing damage all around."
+ },
+ {
+  "value": "SKL_EV_DISCOUNT",
+  "label": "Maintenance Staff",
+  "group": "Quest Support",
+  "help": "Use the elevator for a cheaper price."
+ },
+ {
+  "value": "SKL_HPCUREUP_01",
+  "label": "Multivitamin",
+  "group": "Quest Support",
+  "help": "Increases HP recovery by 5%."
+ },
+ {
+  "value": "SKL_NATURAL_HEAL_UP_P",
+  "label": "Oriental Medicine",
+  "group": "Quest Support",
+  "help": "Heals 15 HP a second."
+ },
+ {
+  "value": "SKL_PATROL_WOT_P",
+  "label": "PATROL DUTY",
+  "group": "Quest Support",
+  "help": "Shows enemies on the map permanently. Decreases Dash stamina consumption and Fatigue Time by 50%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_SNOWWHITE",
+  "label": "Poison Eater",
+  "group": "Quest Support",
+  "help": "Recover HP slowly instead of poison damage."
+ },
+ {
+  "value": "SKL_POISONGENERAL_P",
+  "label": "Poison General",
+  "group": "Quest Support",
+  "help": "Recover HP slowly instead of taking poison damage. Increases the ATK of poison weapons by 30%, and poison resistance increases by 20%."
+ },
+ {
+  "value": "SKL_POISONMASTER_P",
+  "label": "Poison Master",
+  "group": "Quest Support",
+  "help": "Recover HP slowly instead of taking poison damage. Increases the ATK of poison weapons by 10%."
+ },
+ {
+  "value": "SKL_REVIVALTIME_EXTEND_P",
+  "label": "Pro Tip: Ambitious Spirit",
+  "group": "Quest Support",
+  "help": "Invincibility period after a Continue gains +7 seconds."
+ },
+ {
+  "value": "SKL_JUSTGUARD_EXTEND_P",
+  "label": "Pro Tip: Time Weirdo",
+  "group": "Quest Support",
+  "help": "Perfect Guard easier when placed on a Fighter."
+ },
+ {
+  "value": "SKL_SEASONING_M_P",
+  "label": "Sci. Seasoning M",
+  "group": "Quest Support",
+  "help": "Effects of Crushroom and Toughshroom added, when using Barbmeat Full or Half Portion. Also, 55% chance the used Barbmeat isn't consumed."
+ },
+ {
+  "value": "SKL_ADVENTURE_01_P",
+  "label": "Spy",
+  "group": "Quest Support",
+  "help": "Always shows hidden items etc. on the map. Decreases Dash stamina consumption and fatigue time by 40%. Rate at which stamina decreases during Dodge goes down by 40%."
+ },
+ {
+  "value": "SKL_DISCOUNT_STM",
+  "label": "Stamina Discount",
+  "group": "Quest Support",
+  "help": "Halves the STM necessary to equip weapons and/or armor."
+ },
+ {
+  "value": "SKL_DISCOUNT_STR",
+  "label": "Strength Discount",
+  "group": "Quest Support",
+  "help": "Halves the STR necessary to equip weapons and/or armor."
+ },
+ {
+  "value": "SKL_DECDUR_DOWN_02",
+  "label": "Super Long Tail",
+  "group": "Quest Support",
+  "help": "Reduces the durability loss of equipment and weapons by 20%."
+ },
+ {
+  "value": "SKL_SEARCHUP_ITEM",
+  "label": "Treasure Hunter",
+  "group": "Quest Support",
+  "help": "Permanently display hidden items in their initial state on the map."
+ },
+ {
+  "value": "SKL_STUP_FEAT_HPCUREUP_P",
+  "label": "Ultimate Food Fighter",
+  "group": "Quest Support",
+  "help": "Eat faster. Increases HP recovery by 55%. Receive the effects of cooked food when using uncooked Mushrooms and Beasts. Increases fighters all basic parameters by 5%."
+ },
+ {
+  "value": "SKL_DISCOUNT_VIT",
+  "label": "Vitality Discount",
+  "group": "Quest Support",
+  "help": "Halves the VIT necessary to equip weapons and/or armor."
+ },
+ {
+  "value": "SKL_HPCUREUP_02",
+  "label": "Vitamin XXX",
+  "group": "Quest Support",
+  "help": "Increases HP recovery by 20%."
+ },
+ {
+  "value": "SKL_RESISTUP_SLASH_01_P",
+  "label": "Big Bro's Pocket",
+  "group": "Resistance",
+  "help": "Increases Slash Res by 20%."
+ },
+ {
+  "value": "SKL_DEC_FIREELEC_WOT_P",
+  "label": "BILLOTTE'S MEDAL",
+  "group": "Resistance",
+  "help": "Recover faster from being set on fire or from paralysis when electrocuted. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_LESDMG_FALLING_03_P",
+  "label": "Dengeki Online",
+  "group": "Resistance",
+  "help": "Reduce falling damage by 20%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_RESISTUP_ELEC_01_P",
+  "label": "Electric Duchess",
+  "group": "Resistance",
+  "help": "Increases Shock Res by 20%."
+ },
+ {
+  "value": "SKL_DECELEC_01",
+  "label": "Electro Sheep",
+  "group": "Resistance",
+  "help": "Decreases the duration of paralysis when electrocuted."
+ },
+ {
+  "value": "SKL_RESISTUP_FIRE_01_P",
+  "label": "Fiery Captain",
+  "group": "Resistance",
+  "help": "Increases Fire Res by 20%."
+ },
+ {
+  "value": "SKL_DECFIRE_01",
+  "label": "Firefighter",
+  "group": "Resistance",
+  "help": "Decreases the duration of continuous damage taken when on fire."
+ },
+ {
+  "value": "SKL_HARD_STAN",
+  "label": "Indomitable Spirit",
+  "group": "Resistance",
+  "help": "Makes it harder to become Groggy."
+ },
+ {
+  "value": "SKL_RESISTUP_SHOOT_01_P",
+  "label": "Leader's Wheels",
+  "group": "Resistance",
+  "help": "Increases Piercing Res by 20%."
+ },
+ {
+  "value": "SKL_RESISTUP_STRIKE_01_P",
+  "label": "Lil Bro's Basket",
+  "group": "Resistance",
+  "help": "Increases Blunt Res by 20%."
+ },
+ {
+  "value": "SKL_DEATH_PROOF",
+  "label": "Living on the Edge",
+  "group": "Resistance",
+  "help": "Hold out with 1 HP just once when taking fatal damage on a raid. This limit resets when you continue or return to the Waiting Room."
+ },
+ {
+  "value": "SKL_DEATH_PROOF_03_P",
+  "label": "Living on the Edge Thrice",
+  "group": "Resistance",
+  "help": "You can receive fatal damage and survive on 1 HP up to three times. This limit resets when you continue or return to the Waiting Room."
+ },
+ {
+  "value": "SKL_PHOENIX_P",
+  "label": "Phoenix",
+  "group": "Resistance",
+  "help": "Decreases damage from Fire attacks, and slightly recovers HP instead of taking Fire damage when attached to Defense Fighters, Hunters, or Haters."
+ },
+ {
+  "value": "SKL_NODMG_CRI_P",
+  "label": "Pro Tip: Conqueror's Seal",
+  "group": "Resistance",
+  "help": "Negate Critical damage."
+ },
+ {
+  "value": "SKL_RESISTUP_POISON_01_P",
+  "label": "Scornful Susie",
+  "group": "Resistance",
+  "help": "Increases Poison Res by 20%."
+ },
+ {
+  "value": "SKL_LESDMG_FALLING_01",
+  "label": "Shock Absorber",
+  "group": "Resistance",
+  "help": "Reduce falling damage by 50%."
+ },
+ {
+  "value": "SKL_LESDMG_FALLING_02",
+  "label": "Super Shock Absorber",
+  "group": "Resistance",
+  "help": "Ignore all falling damage."
+ },
+ {
+  "value": "SKL_RESUP_DECDOWN_00_P",
+  "label": "Bryan Zemeckis",
+  "group": "Resource Accrual",
+  "help": "Increases HP Recovery, Kill Coins gained from enemies and treasure, EXP/ABP gained, and SPLithium earned by 10%."
+ },
+ {
+  "value": "SKL_MONEYUP_02",
+  "label": "Golden Lucky Cat",
+  "group": "Resource Accrual",
+  "help": "Increases Kill Coins gained from enemies and treasure by 20%."
+ },
+ {
+  "value": "SKL_SPRTUP_02",
+  "label": "King Mantis",
+  "group": "Resource Accrual",
+  "help": "Increases SPLithium earned by 20%."
+ },
+ {
+  "value": "SKL_MONEYUP_01",
+  "label": "Lucky Cat",
+  "group": "Resource Accrual",
+  "help": "Increases Kill Coins gained from enemies and treasure by 5%."
+ },
+ {
+  "value": "SKL_SPRTUP_01",
+  "label": "Mantis",
+  "group": "Resource Accrual",
+  "help": "Increases SPLithium earned by 5%."
+ },
+ {
+  "value": "SKL_RESUP_DECDOWN_01_P",
+  "label": "Naomi Detox",
+  "group": "Resource Accrual",
+  "help": "Increases Kill Coins gained from enemies and treasure, and SPLithium earned by 50%."
+ },
+ {
+  "value": "SKL_EXPUP_02",
+  "label": "Nitro Boost",
+  "group": "Resource Accrual",
+  "help": "Increases EXP gained by 40%."
+ },
+ {
+  "value": "SKL_RESUP_DECDOWN_P",
+  "label": "Rich Family",
+  "group": "Resource Accrual",
+  "help": "Increases HP Recovery, Kill Coins gained from enemies and treasure, EXP/ABP gained, and SPLithium earned by 20%. Reduces the durability loss of equipment and weapons by 20%."
+ },
+ {
+  "value": "SKL_ABPUP_01",
+  "label": "Squeezer",
+  "group": "Resource Accrual",
+  "help": "Increases ABP gained by 10%."
+ },
+ {
+  "value": "SKL_MONEYUP_03_P",
+  "label": "Stasis Field",
+  "group": "Resource Accrual",
+  "help": "Increases Kill Coins gained from enemies and treasure by 15%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ABPUP_02",
+  "label": "Super Squeezer",
+  "group": "Resource Accrual",
+  "help": "Increases ABP gained by 40%."
+ },
+ {
+  "value": "SKL_EXPUP_01",
+  "label": "Turbo-charged Engine",
+  "group": "Resource Accrual",
+  "help": "Increases EXP gained by 10%."
+ },
+ {
+  "value": "SKL_ARRNG_STUP_DIY_02_P",
+  "label": "4Gamer.net",
+  "group": "Special Strengthening",
+  "help": "Boosts DEF by 8% when equipped with a complete set of D.O.D ARMS (head, upper body, lower body). (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_SHORT_DROPKICK_P",
+  "label": "Angel Kicker",
+  "group": "Special Strengthening",
+  "help": "Reduces dash time required before a Dropkick."
+ },
+ {
+  "value": "SKL_IRON_ABILITY_UP_P",
+  "label": "ANGRY MAMA",
+  "group": "Special Strengthening",
+  "help": "Iron + Trucker armor bonus. Equip 1 piece: Iron Attack Power +20%. Equip 2: +40%. Equip 3: +60%. Full set: Rage Gauge fills +100% faster."
+ },
+ {
+  "value": "SKL_FAN_UP_02_P",
+  "label": "Arch Wizard",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +24% for CANDLE WOLF weapons and armor."
+ },
+ {
+  "value": "SKL_ARCHERY_ATKUP_01_P",
+  "label": "Archery Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Archer's Bows."
+ },
+ {
+  "value": "SKL_RIFLE_ATK_UP_01_P",
+  "label": "Assault Rifle Addict",
+  "group": "Special Strengthening",
+  "help": "Increases Assault Rifle ATK by 30%."
+ },
+ {
+  "value": "SKL_BATTLEAXE_ATKUP_01_P",
+  "label": "Axe Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Axes."
+ },
+ {
+  "value": "SKL_BAD_GIRL_NMH_P",
+  "label": "BAD GIRL",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +10% for M.I.L.K weapons and armor."
+ },
+ {
+  "value": "SKL_CRSBOW_ABILITY_UP_P",
+  "label": "Bandit",
+  "group": "Special Strengthening",
+  "help": "Crossbow + Rogue armor bonus. Equip 1 piece: Crossbow critical hit rate +10%. Equip 2: +20%. Equip 3: +30%. Full set: Slightly decreases reload time."
+ },
+ {
+  "value": "SKL_WEP_SPDUP",
+  "label": "Barbarian",
+  "group": "Special Strengthening",
+  "help": "Increase attack power of double- handed weapons by 20%."
+ },
+ {
+  "value": "SKL_BAT_ATKUP_01_P",
+  "label": "Bat Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Bats."
+ },
+ {
+  "value": "SKL_ROCKET_ABILITY_UP_P",
+  "label": "Bazooka Wake-Up",
+  "group": "Special Strengthening",
+  "help": "Rocket Launcher + Guerrilla Blaster armor bonus. Equip 1 piece: max of +20% damage the closer you attack. Equip 2: 40%. Equip 3: 80%. Full set: +100% Attack Power for final rocket."
+ },
+ {
+  "value": "SKL_CLAW_ABILITY_UP_P",
+  "label": "Bear Claw",
+  "group": "Special Strengthening",
+  "help": "Claw + Agamemnon armor bonus. Equip 1 piece: reduces armor durability loss rate for Claw + Agamemnon by 60%. Equip 2: 50%. Equip 3: 40%. Full set: Recover HP equal to 20% damage dealt with Claws (up to 7% of maximum HP)."
+ },
+ {
+  "value": "SKL_CRIUP_ATKUP_01_P",
+  "label": "Below the Belt",
+  "group": "Special Strengthening",
+  "help": "Increases chances of a critical hit by 20% and critical hit damage by 30%."
+ },
+ {
+  "value": "SKL_BTLAXE_ABILITY_UP_P",
+  "label": "BERSERKER",
+  "group": "Special Strengthening",
+  "help": "Axe + Warrior armor bonus. Equip 1 piece: Absorbs +5% of damage received and adds it to your attacks. Equip 2: +10%. Equip 3: +20%. (Resets after attacking). Full set: recover HP equal to 20% damage dealt (up to 7% of maximum HP)."
+ },
+ {
+  "value": "SKL_GUNMAN_01_P",
+  "label": "Billy the Kid",
+  "group": "Special Strengthening",
+  "help": "Increases Attack Power of Piercing weapons by 15% and slightly reduces reload time."
+ },
+ {
+  "value": "SKL_DEFUP_NODMG_RND_01_P",
+  "label": "Body Double",
+  "group": "Special Strengthening",
+  "help": "Increases Defense by 20%, have a 20% chance of not taking any damage when hit. (Excludes fire damage, etc.)"
+ },
+ {
+  "value": "SKL_BOWLING_ATKUP_01_P",
+  "label": "Bowling Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Bowling Balls."
+ },
+ {
+  "value": "SKL_BOXGLOVE_ATKUP_01_P",
+  "label": "Boxing Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Boxing Gloves."
+ },
+ {
+  "value": "SKL_ANTI_MSR_F_P",
+  "label": "Brainmycin",
+  "group": "Special Strengthening",
+  "help": "Negates the effects of thrown Brainshrooms when attached to Defense Fighters, Hunters, or Haters."
+ },
+ {
+  "value": "SKL_ATKDEFUP_HPLOW_01",
+  "label": "Bull",
+  "group": "Special Strengthening",
+  "help": "Increase ATK and DEF by 30% when your HP is at 15% or below."
+ },
+ {
+  "value": "SKL_CIRCLESAW_ATKUP_01_P",
+  "label": "Buzzsaw Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Buzzsaws."
+ },
+ {
+  "value": "SKL_GAUGEUP_REV_WOT_P",
+  "label": "Call for Vengeance",
+  "group": "Special Strengthening",
+  "help": "Rage Gauge increases by +2 when starting a Raid from the Revenge List. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_IHOCKEY_ABILITY_UP_P",
+  "label": "CENTER FORWARD",
+  "group": "Special Strengthening",
+  "help": "Hockey Stick + Apocalyptic Hockey armor bonus. Equip 1 piece: Sonic Puck Rage Move Attack Power +30%. Equip 2: +60%. Equip 3: +100%. Full set: your pucks won't hit your Fighter."
+ },
+ {
+  "value": "SKL_ATKUP_FORTGUARD_P",
+  "label": "Cerberus",
+  "group": "Special Strengthening",
+  "help": "Increases ATK of the Defender it's equipped to by 30%."
+ },
+ {
+  "value": "SKL_CHAINSAW_ATKUP_01_P",
+  "label": "Chainsaw Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Chainsaws."
+ },
+ {
+  "value": "SKL_ZEROPOS_SHOT_WOT_P",
+  "label": "Chi-Ha",
+  "group": "Special Strengthening",
+  "help": "The closer you are when attacking with a War Ensemble ranged weapon, the higher the damage. Up to 30% more damage. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ATKDEFHPUP_GUARD_P",
+  "label": "Chimera",
+  "group": "Special Strengthening",
+  "help": "Increases Attack Power by 20%, Defense by 20%, and max HP by 20% when attached to Defense Fighters."
+ },
+ {
+  "value": "SKL_CLEAVER_ATKUP_01_P",
+  "label": "Chopper Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Choppers."
+ },
+ {
+  "value": "SKL_CLAW_ATKUP_01_P",
+  "label": "Claw Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Claws."
+ },
+ {
+  "value": "SKL_DEFUP_GAUGEUP_FORT_P",
+  "label": "Colonial Marine Corps",
+  "group": "Special Strengthening",
+  "help": "Increases DEF by 30% and Rage Gauge by +1 during a Raid or when Defending."
+ },
+ {
+  "value": "SKL_CON_SMITH_K7_P",
+  "label": "Con Smith",
+  "group": "Special Strengthening",
+  "help": "Attack Power 20% when dual-wielding two of the same one-handed weapon. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_BOXING_ABILITY_UP_P",
+  "label": "Corkscrew Punch",
+  "group": "Special Strengthening",
+  "help": "Boxing Gloves + Hard Puncher armor bonus. Equip 1 piece: Attack Power +5%. Equip 2: +10%. Equip 3: +15%. Full set: 30% chance of no durability loss when performing Normal Attacks with Boxing Gloves."
+ },
+ {
+  "value": "SKL_CRI_ATKUP_P",
+  "label": "Critical Attack",
+  "group": "Special Strengthening",
+  "help": "Increases Critical Hit damage by 30%."
+ },
+ {
+  "value": "SKL_CROSSBOW_ATK_UP_01_P",
+  "label": "Crossbow Addict",
+  "group": "Special Strengthening",
+  "help": "Crossbow Attack Power increases by 30%."
+ },
+ {
+  "value": "SKL_ATKUPSURROUNDENEMY_P",
+  "label": "Crowd Pleaser",
+  "group": "Special Strengthening",
+  "help": "Increases ATK by 10% per enemy when 1 - 5 enemies appear."
+ },
+ {
+  "value": "SKL_DAN_SMITH_K7_P",
+  "label": "Dan Smith",
+  "group": "Special Strengthening",
+  "help": "Attack Power +15% for Magnums. Also, 15% chance Magnum ammo and durability won't decrease with Normal Attacks. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_SHOTGUN_ABILITY_UP_P",
+  "label": "Death Hunt",
+  "group": "Special Strengthening",
+  "help": "Shotgun + Barrett Punisher armor bonus. Equip 1 piece: Attack Power +10%. Equip 2: +20%. Equip 3: +30%. Full set: Attack Power +80% for Shotgun Rage Moves and reduces durability loss rate during Rage Moves by 50%."
+ },
+ {
+  "value": "SKL_WDMG_DOWN_02_P",
+  "label": "Dengeki PlayStation",
+  "group": "Special Strengthening",
+  "help": "Increase attack power during Down Attack by 10%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DESTROYMAN_NMH_P",
+  "label": "DESTROYMAN",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +10% for CANDLE WOLF weapons and armor."
+ },
+ {
+  "value": "SKL_ARRNG_STATUP_DIY",
+  "label": "DIY Enthusiast",
+  "group": "Special Strengthening",
+  "help": "Boosts DEF by 20% when equipped with a complete set of D.O.D ARMS (head, upper body, lower body)."
+ },
+ {
+  "value": "SKL_SPEAR_ABILITY_UP_P",
+  "label": "Don Quixote",
+  "group": "Special Strengthening",
+  "help": "Spear + Knight armor bonus. Equip 1 piece: +10% Defense. Equip 2: +20%. Equip 3: +30%. Full set: Attack Power +50% when attacking after a Perfect Guard. (Resets after attacking)."
+ },
+ {
+  "value": "SKL_DR_PEACE_NMH_P",
+  "label": "DR. PEACE",
+  "group": "Special Strengthening",
+  "help": "Slightly reduces reload time."
+ },
+ {
+  "value": "SKL_FLAMERD_ABILITY_UP_P",
+  "label": "Dragonfire",
+  "group": "Special Strengthening",
+  "help": "Flamethrower + Phantom Soldier armor bonus. Equip 1 piece: Defense +10%. Equip 2: +25%. Equip 3: +50%. Full set: Fire damage dealt by Flamethrower +100%."
+ },
+ {
+  "value": "SKL_DRILL_ATKUP_01_P",
+  "label": "Drill Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Drills."
+ },
+ {
+  "value": "SKL_DRILL_ABILITY_UP_P",
+  "label": "Drill Mole",
+  "group": "Special Strengthening",
+  "help": "Drill + Doctor Drill armor bonus. Equip 1 piece: Attack Power +20%. Equip 2: +30%. Equip 3: +40%. Full set: Recover HP equal to 15% damage dealt with Drills (up to 7% of maximum HP)."
+ },
+ {
+  "value": "SKL_MIL_UP_01",
+  "label": "Drill Sergeant",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +7% for WAR ENSEMBLE weapons and armor."
+ },
+ {
+  "value": "SKL_WWEP_ATKUP_01",
+  "label": "Dual Wielding Master",
+  "group": "Special Strengthening",
+  "help": "Increase ATK by 10% when using the same one-handed weapon in both hands."
+ },
+ {
+  "value": "SKL_TSRGUN_ABILITY_UP_P",
+  "label": "Electric Bop",
+  "group": "Special Strengthening",
+  "help": "Stun Gun + Exo-armor armor bonus. Equip 1 piece: Stun Gun Attack Power +10% Equip 2: +20%. Equip 3: +30%. Full set: 20% chance of no durability or ammo loss with Stun Gun Normal Attacks."
+ },
+ {
+  "value": "SKL_ATKDEFUP_ELEC_01",
+  "label": "Electrifier",
+  "group": "Special Strengthening",
+  "help": "Increases the ATK of electric weapons by 10%."
+ },
+ {
+  "value": "SKL_LESDMG_STEALTH_03_P",
+  "label": "Famitsu",
+  "group": "Special Strengthening",
+  "help": "Increases damage of suplexes while stealthed by 20%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ARRNG_STATUP_FAN",
+  "label": "Fantasy Enthusiast",
+  "group": "Special Strengthening",
+  "help": "Boosts DEF by 20% when equipped with a complete Candle Wolf set (head, upper body, lower body)."
+ },
+ {
+  "value": "SKL_NTHEAL_ATDFUPHPMAX_P",
+  "label": "Final Hero",
+  "group": "Special Strengthening",
+  "help": "Heals 15 HP per second. Increases ATK and DEF by 40% when at full health."
+ },
+ {
+  "value": "SKL_ST_AILMENT_DIS_01_P",
+  "label": "Fingers Crossed",
+  "group": "Special Strengthening",
+  "help": "Converts Poison damage to health recovery, reduces Burn and Paralysis duration, and negates Blindness caused by Frongus, Pickaxe, or Iron."
+ },
+ {
+  "value": "SKL_FIREBATON_ATKUP_01_P",
+  "label": "Fire Baton Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Fire Batons."
+ },
+ {
+  "value": "SKL_FIREROD_ATKUP_01_P",
+  "label": "Fire Rod Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Fire Rods."
+ },
+ {
+  "value": "SKL_ATKDEFUP_FIRE_01",
+  "label": "Firestarter",
+  "group": "Special Strengthening",
+  "help": "Increases the ATK of fire weapons by 10%."
+ },
+ {
+  "value": "SKL_FBATON_ABILITY_UP_P",
+  "label": "Firewheel",
+  "group": "Special Strengthening",
+  "help": "Fire Baton + Splatter 13 armor bonus. Equip 1 piece: Fire Baton Attack Power +20%. Equip 2: +30%. Equip 3: +40%. Full set: Fire damage dealt by Fire Baton +80%."
+ },
+ {
+  "value": "SKL_FIREWKS_ATK_UP_01_P",
+  "label": "Fireworks Addict",
+  "group": "Special Strengthening",
+  "help": "Increases Firework ATK by 30%."
+ },
+ {
+  "value": "SKL_ANTI_MSR_G_P",
+  "label": "Fishymycin",
+  "group": "Special Strengthening",
+  "help": "Negates the effects of thrown Fishy Fungus when attached to Defense Fighters, Hunters, or Haters."
+ },
+ {
+  "value": "SKL_MORNSTAR_ATKUP_01_P",
+  "label": "Flail Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Flails."
+ },
+ {
+  "value": "SKL_FLAMERAD_ATKUP_01_P",
+  "label": "Flamethrower Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Flamethrowers."
+ },
+ {
+  "value": "SKL_RAGE_GAUGE_01_P",
+  "label": "Flash Boiler",
+  "group": "Special Strengthening",
+  "help": "Rage Gauge increase by +2 once at the start of a Raid, or when using an elevator or escalator."
+ },
+ {
+  "value": "SKL_ARCWELD_ABILITY_UP_P",
+  "label": "Flashdance",
+  "group": "Special Strengthening",
+  "help": "Welding Gun + Steel Soldier armor bonus. Equip 1 piece: Welding Gun Attack Power +20% Equip 2: +30%. Equip 3: +40%. Full set: 25% chance of taking 0 damage from an attack. (Excludes fire damage, etc.)"
+ },
+ {
+  "value": "SKL_SNPRRFL_ABILITY_UP_P",
+  "label": "Full Metal Jacket",
+  "group": "Special Strengthening",
+  "help": "Sniper rifle + Silent Sniper armor bonus. 1 piece of armor: Sniper rifle headshot Attack Power +30%. 2 pieces: +50%. 3 pieces: +70%. Full set: last bullet +50% Attack Power."
+ },
+ {
+  "value": "SKL_GARCIAN_SMITH_K7_P",
+  "label": "Garcian Smith",
+  "group": "Special Strengthening",
+  "help": "Increases critical hit rate by 15% and boosts critical hit damage by 15%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ATKUP_ANTI_HIGHLV",
+  "label": "Giant Killer",
+  "group": "Special Strengthening",
+  "help": "Increase Attack Power by 30% against enemies 5 levels or higher than you."
+ },
+ {
+  "value": "SKL_HPUP_FORTGUARD_P",
+  "label": "Golem",
+  "group": "Special Strengthening",
+  "help": "Increases max HP of the Defender it's equipped to by 40%."
+ },
+ {
+  "value": "SKL_DIY_UP_02_P",
+  "label": "Grand Master Builder",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +24% for D.O.D. ARMS weapons and armor."
+ },
+ {
+  "value": "SKL_SHOVEL_ABILITY_UP_P",
+  "label": "Gravedigger",
+  "group": "Special Strengthening",
+  "help": "Shovel + Dark Ryback armor bonus. Equip 1 piece: Shovel Attack Power +10%. Equip 2: +20%. Equip 3: +30%. Full set: 20% chance of taking 0 damage from an attack."
+ },
+ {
+  "value": "SKL_SWORD_ABILITY_UP_P",
+  "label": "Great Hero",
+  "group": "Special Strengthening",
+  "help": "Sword + Fencing armor bonus. Equip 1 piece: Rage Gauge fills +20% faster. Equip 2: +40%. Equip 3: +60%. Full set: Attack Power for Sword Rage Moves +100%."
+ },
+ {
+  "value": "SKL_ANTI_MSR_D_P",
+  "label": "Guardmycin",
+  "group": "Special Strengthening",
+  "help": "Negates the effects of the enemy's GuardShroom."
+ },
+ {
+  "value": "SKL_KATANA_ABILITY_UP_P",
+  "label": "Hagakure",
+  "group": "Special Strengthening",
+  "help": "Katana + Sengoku armor bonus. 1 piece of armor: Katana critical hit rate +20%. 2 pieces: +40%. 3 pieces: +60%. Full set: +30% damage for critical attacks."
+ },
+ {
+  "value": "SKL_HAMMER_ATK_UP_01_P",
+  "label": "Hammer Addict",
+  "group": "Special Strengthening",
+  "help": "Increases Hammer ATK by 30%."
+ },
+ {
+  "value": "SKL_HAMMER_ABILITY_UP_P",
+  "label": "Hammerhead",
+  "group": "Special Strengthening",
+  "help": "Hammer + Chemical Agent armor bonus. Equip 1 piece: Hammer Attack Power +20%. Equip 2: +40%. Equip 3: +70%. Full set: Defense +30%."
+ },
+ {
+  "value": "SKL_HARMAN_SMITH_K7_P",
+  "label": "Harman Smith",
+  "group": "Special Strengthening",
+  "help": "Increases fighters all basic parameters by 7%.Also, revel in killer7 style blood sprays when using attacks with bullets. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_MIL_UP_02_P",
+  "label": "Hellish Drill Sergeant",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +24% for WAR ENSEMBLE weapons and armor."
+ },
+ {
+  "value": "SKL_ICEHOCKEY_ATK_UP_P",
+  "label": "Hockey Addict",
+  "group": "Special Strengthening",
+  "help": "Increase Hockey Stick ATK by 30%."
+ },
+ {
+  "value": "SKL_HOLLY_SUMMERS_NMH_P",
+  "label": "HOLLY SUMMERS",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +10% for WAR ENSEMBLE weapons and armor."
+ },
+ {
+  "value": "SKL_ATKDEFUP_POISN_01",
+  "label": "Hornet",
+  "group": "Special Strengthening",
+  "help": "Increases the ATK of poison weapons by 10%."
+ },
+ {
+  "value": "SKL_STUNROD_ABILITY_UP_P",
+  "label": "Human Power Plant",
+  "group": "Special Strengthening",
+  "help": "Stun Rod + Combat Diver Armor bonus. Equip 1 piece: Rage Gauge fills +40% faster. Equip 2: +70%. Equip 3: +100%. Full set: Reduces Stun Rod Rage Move cost by 1."
+ },
+ {
+  "value": "SKL_THDRROD_ABILITY_UP_P",
+  "label": "Hyper Zeus",
+  "group": "Special Strengthening",
+  "help": "Thunder Rod + Evil Wizard armor bonus. Equip 1 piece: Defense +5%. Equip 2: +10%. Equip 3: +20%. Full set: speed of stamina consumption during Dash, and stamina consumption for Dodge -50%."
+ },
+ {
+  "value": "SKL_ASSAULT_ATKUP_WOT_P",
+  "label": "INVADER (SKL_ASSAULT_ATKUP_WOT_P)",
+  "group": "Special Strengthening",
+  "help": "ATK increases by 20% in a Raid. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ATKUP_GAUGEUP_FORT_P",
+  "label": "Invader (SKL_ATKUP_GAUGEUP_FORT_P)",
+  "group": "Special Strengthening",
+  "help": "Increases Attack Power by 30% and Rage Gauge by +1 during a Raid or when Defending."
+ },
+ {
+  "value": "SKL_IRON_ATK_UP_01_P",
+  "label": "Iron Addict",
+  "group": "Special Strengthening",
+  "help": "Iron Attack Power increases by 30%."
+ },
+ {
+  "value": "SKL_TWKNIFE_ABILITY_UP_P",
+  "label": "Jiraiya",
+  "group": "Special Strengthening",
+  "help": "Shuriken + Clay Figurine armor bonus. Equip 1 piece: reduces armor durability loss rate for Shuriken + Clay Figurine by 60%. Equip 2: 50%. Equip 3: 40%. Full set: Rage Gauge fills +60% faster."
+ },
+ {
+  "value": "SKL_WDMG_DOWN",
+  "label": "Judge's Gavel",
+  "group": "Special Strengthening",
+  "help": "Increase attack power during Down Attack by 100%."
+ },
+ {
+  "value": "SKL_FAST_RELOAD_01_P",
+  "label": "Juggler",
+  "group": "Special Strengthening",
+  "help": "Reduces reload time."
+ },
+ {
+  "value": "SKL_MACHETE_ABILITY_UP_P",
+  "label": "Jungle Tiger",
+  "group": "Special Strengthening",
+  "help": "Machete + Special Forces armor bonus. Equip 1 piece: Rage Gauge fills +30% faster. Equip 2: +50%. Equip 3: +80%. Full set: Attack Power for Machete Rage Moves +30%."
+ },
+ {
+  "value": "SKL_ATKUP_SLASHSTRIKE_P",
+  "label": "Jupiter Style",
+  "group": "Special Strengthening",
+  "help": "Boosts ATK of blunt weapons and slashing weapons by 10%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_KAEDE_SMITH_K7_P",
+  "label": "KAEDE Smith",
+  "group": "Special Strengthening",
+  "help": "Attack Power +15% for Sniper Rifles. Also, 15% chance Sniper Rifle ammo and durability won't decrease with Normal Attacks. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_GRAVITY_DROPKICK_P",
+  "label": "Kat",
+  "group": "Special Strengthening",
+  "help": "Causes a shockwave with AoE and knockback effect when a Dropkick hits. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_KATANA_ATK_UP_P",
+  "label": "Katana Addict",
+  "group": "Special Strengthening",
+  "help": "Increase Katana ATK by 30%."
+ },
+ {
+  "value": "SKL_KEVIN_SMITH_K7_P",
+  "label": "Kevin Smith",
+  "group": "Special Strengthening",
+  "help": "Attack Power +15% for Knives. Also, 15% chance Knife durability won't decrease with Normal Attacks. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_PECKER_ABILITY_UP_P",
+  "label": "King of Coal",
+  "group": "Special Strengthening",
+  "help": "Pickaxe + Road Shocker armor bonus. Equip 1 piece: Attack Power and Defense +10%. Equip 2: +20%. Equip 3: +30%. Full set: negates Blindness effect caused by Frongus, Pickaxe, or Iron."
+ },
+ {
+  "value": "SKL_KNIFE_ATKUP_01_P",
+  "label": "Knife Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Knives."
+ },
+ {
+  "value": "SKL_ATKDEFUP_HPMAX_02",
+  "label": "Legendary Hero",
+  "group": "Special Strengthening",
+  "help": "Increase ATK and DEF by 30% when at full health."
+ },
+ {
+  "value": "SKL_ATKUP_DEFUP_P",
+  "label": "LET IT DIE",
+  "group": "Special Strengthening",
+  "help": "Increase ATK and DEF by 0.1% x Total Number of Deaths when placed on a Fighter."
+ },
+ {
+  "value": "SKL_SHISHIMAI_ATKUP_01_P",
+  "label": "Lion Dance Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Lion Dance Knuckle weapons."
+ },
+ {
+  "value": "SKL_SISIMAI_ABILITY_UP_P",
+  "label": "Lion Man",
+  "group": "Special Strengthening",
+  "help": "Lion Dance Knuckle + Sword Dancer armor bonus. Equip 1 piece: Lion Dance Knuckle Attack Power +10%. Equip 2: +20%. Equip 3: +30%. Full set: critical hit damage +30%."
+ },
+ {
+  "value": "SKL_CLEAVER_ABILITY_UP_P",
+  "label": "Local Butcher",
+  "group": "Special Strengthening",
+  "help": "Chopper + Happy Wheeler armor bonus. Equip 1 piece: Attack Power +10%. Equip 2: +20%. Equip 3: +40%. Full set: Screamers, Haters, and Hunters may drop Barbmeat Half Portion when defeated."
+ },
+ {
+  "value": "SKL_ANTI_MSR_B_P",
+  "label": "Loxorin",
+  "group": "Special Strengthening",
+  "help": "When attached to Hunters, Haters, or defending Fighters, cancels thrown Brainshrooms and Fishy Fungus Groggy/Confusion effects."
+ },
+ {
+  "value": "SKL_CHNSAW_ABILITY_UP_P",
+  "label": "Lumberjack",
+  "group": "Special Strengthening",
+  "help": "Chainsaw + Steel Tribe armor bonus. Equip 1 piece: Chainsaw Attack Power +20%. Equip 2: +30%. Equip 3: +40%. Full set: speed of stamina consumption for Dash, and stamina consumption for Dodge -60%."
+ },
+ {
+  "value": "SKL_MACHETE_ATK_UP_01_P",
+  "label": "Machete Addict",
+  "group": "Special Strengthening",
+  "help": "Increases Machete ATK by 30%."
+ },
+ {
+  "value": "SKL_E_BURST_P",
+  "label": "Magic Fencer",
+  "group": "Special Strengthening",
+  "help": "Slashing & Blunt Weapon Type Fire/Electric/Poison Effect ATK is increased by 50%. Increase damage dealt by critical hits by 10%."
+ },
+ {
+  "value": "SKL_REVOLVER_ATKUP_01_P",
+  "label": "Magnum Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Magnums."
+ },
+ {
+  "value": "SKL_MASK_DE_SMITH_K7_P",
+  "label": "MASK De Smith",
+  "group": "Special Strengthening",
+  "help": "Attack Power +15% for Rocket Launchers. Also, 15% chance Rocket Launcher ammo and durability won't decrease with Normal Attacks. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_DIY_UP_01",
+  "label": "Master Builder",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +7% for D.O.D. ARMS weapons and armor."
+ },
+ {
+  "value": "SKL_LESDMG_STEALTH_02",
+  "label": "Master Ninja",
+  "group": "Special Strengthening",
+  "help": "Increases damage of suplexes while stealthed by 100%."
+ },
+ {
+  "value": "SKL_NOEYEDMG_FORTGUARD_P",
+  "label": "Master Onion Cutter",
+  "group": "Special Strengthening",
+  "help": "Negates the blindness effect from Frongus, Pickaxes and Irons if equipped to a Defense Fighter, Hunter or Hater."
+ },
+ {
+  "value": "SKL_SPO_UP_01",
+  "label": "Medalist",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +7% for M.I.L.K weapons and armor."
+ },
+ {
+  "value": "SKL_ARRNG_STATUP_MIL",
+  "label": "Military Enthusiast",
+  "group": "Special Strengthening",
+  "help": "Boosts DEF by 20% when equipped with a complete War Ensemble set (head, upper body, lower body)."
+ },
+ {
+  "value": "SKL_DRAIN_02",
+  "label": "Mosquito",
+  "group": "Special Strengthening",
+  "help": "Recover 3% of damage dealt as HP. The maximum recovery per hit is 3% of your max health."
+ },
+ {
+  "value": "SKL_BIKE_ATKUP_01_P",
+  "label": "Motorcycle Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Motorcycles."
+ },
+ {
+  "value": "SKL_SABRE_ABILITY_UP_P",
+  "label": "Musketeer",
+  "group": "Special Strengthening",
+  "help": "Saber + Paladin armor bonus. Equip 1 piece: reduces armor durability loss rate for Saber + Paladin by 80%. Equip 2: 60%. Equip 3: 40%. Full set: Critical hit rate +30%."
+ },
+ {
+  "value": "SKL_NAILGUN_ATKUP_01_P",
+  "label": "Nail Gun Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Nail Guns."
+ },
+ {
+  "value": "SKL_ANTI_MSR_A_P",
+  "label": "Naspirin",
+  "group": "Special Strengthening",
+  "help": "Cancels out enemy's Guardshroom Invincibility effect and Transparungus Cloak effect."
+ },
+ {
+  "value": "SKL_KNIFE_ABILITY_UP_P",
+  "label": "Night Assassin",
+  "group": "Special Strengthening",
+  "help": "Knife + Night Scout armor bonus. 1 piece of armor: 10% less stamina consumed when Dodging. 2 pieces: 30%, 3 pieces: 50%. Full set: Knife Attack Power +100% after Dodging. Returns to normal after attacking once. Effect does not stack."
+ },
+ {
+  "value": "SKL_LESDMG_STEALTH_01",
+  "label": "Ninja",
+  "group": "Special Strengthening",
+  "help": "Increases damage of suplexes while stealthed by 50%."
+ },
+ {
+  "value": "SKL_WWEP_ATKUP_EX_01_P",
+  "label": "Niten Ichi-ryu",
+  "group": "Special Strengthening",
+  "help": "Increases Attack Power by 30% and decreases Dodge stamina consumption by 50% when using the same one-handed weapon in both hands."
+ },
+ {
+  "value": "SKL_ANTI_MSR_EX_P",
+  "label": "Not So Fast",
+  "group": "Special Strengthening",
+  "help": "When attached to Defense Fighters, Hunters, or Haters: Negates thrown Brainshroom fatigue, Fishy Fungus confusion, Guardshroom invincibility, Transparungus invisibility, and Stingshroom Attack Power boost; negates blindness effect from Frongus, Pickaxes and Irons. Slowmungus effect canceled after taking damage."
+ },
+ {
+  "value": "SKL_STIMBER_ABILITY_UP_P",
+  "label": "On-Site Supervision",
+  "group": "Special Strengthening",
+  "help": "Timber + Violent Grinder armor bonus. Equip 1 piece: Defense +10%. Equip 2: +20%. Equip 3: +30%. Full set: no fuel loss for Timber."
+ },
+ {
+  "value": "SKL_HEADSHOTUP",
+  "label": "One Shot One Kill",
+  "group": "Special Strengthening",
+  "help": "Increase attack power during Headshot by 70%."
+ },
+ {
+  "value": "SKL_TOHEAVEN_P",
+  "label": "Path to Heaven",
+  "group": "Special Strengthening",
+  "help": "Increase ATK and DEF by 0.2% x current floor number."
+ },
+ {
+  "value": "SKL_ATK_CHARGED",
+  "label": "Payback",
+  "group": "Special Strengthening",
+  "help": "Store up to 20% of damage taken and add that amount to your next attack. The stored damage is reset after attacking."
+ },
+ {
+  "value": "SKL_PITCH_M_ABILITY_UP_P",
+  "label": "Perfect Closer",
+  "group": "Special Strengthening",
+  "help": "Pitching Machine + Kendo armor bonus. Equip 1 piece: Pitching Machine 10% chance of no durability or ammo loss. Equip 2: 20%. Equip 3: 30%. Full set: fired pitching balls randomly become a +200% damage STRIKE attack."
+ },
+ {
+  "value": "SKL_PECKER_ATKUP_01_P",
+  "label": "Pickaxe Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Pickaxes."
+ },
+ {
+  "value": "SKL_NAILGUN_ABILITY_UP_P",
+  "label": "Pile Bunker",
+  "group": "Special Strengthening",
+  "help": "Nail Gun + Power Stomper armor bonus. Equip 1 piece: Recover HP equal to 3% of damage dealt with a Nail Gun. Equip 2: 6%. Equip 3: 12%. (Up to 7% of maximum HP). Full set: Defense +20%."
+ },
+ {
+  "value": "SKL_BAT_ABILITY_UP_P",
+  "label": "Pinch Hitter",
+  "group": "Special Strengthening",
+  "help": "Bat + Heavy Hitter armor bonus. 1 piece of armor: Bat Attack Power +20%. 2 pieces: +30%. 3 pieces: +44%. Full set: Full Swing's damage may be doubled at random!"
+ },
+ {
+  "value": "SKL_PITCHING_ATKUP_01_P",
+  "label": "Pitching Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Pitching Machines."
+ },
+ {
+  "value": "SKL_SPO_UP_02_P",
+  "label": "Platinum Medalist",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +24% for M.I.L.K weapons and armor."
+ },
+ {
+  "value": "SKL_DOWNDAMAGE_DOWN_01_P",
+  "label": "Play Dead",
+  "group": "Special Strengthening",
+  "help": "Reduces damage received by 80% when knocked down."
+ },
+ {
+  "value": "SKL_ANTI_MSR_C_P",
+  "label": "Poltarin",
+  "group": "Special Strengthening",
+  "help": "Nullifies Stingshroom attack boost effects; Slowmungus effect cancelled after taking damage. (For Defender, Hunter, or Hater)"
+ },
+ {
+  "value": "SKL_ATKDEFUP_GUARD_P",
+  "label": "Precocious Bouncer",
+  "group": "Special Strengthening",
+  "help": "Increases ATK and DEF by 30% when attached to Defense Fighters."
+ },
+ {
+  "value": "SKL_BOWLING_ABILITY_UP_P",
+  "label": "Pro Bowler",
+  "group": "Special Strengthening",
+  "help": "Bowling Ball + Blitz Bowler armor bonus. Equip 1 piece: stamina consumption for Dodges -50%. Equip 2: -60%. Equip 3: -70%. Full set: sometimes doubles damage dealt by Triple Strike."
+ },
+ {
+  "value": "SKL_LESDMG_STEALTH_04_P",
+  "label": "Pro Tip: Ninja Launcher",
+  "group": "Special Strengthening",
+  "help": "Increases damage of suplexes while stealthed by 10000%."
+ },
+ {
+  "value": "SKL_SLASHSTRIKE_SAVING_P",
+  "label": "Pro Tip: Saving Song",
+  "group": "Special Strengthening",
+  "help": "40% chance ammo and durability won't decrease with Normal Attacks of slashing and blunt weapons."
+ },
+ {
+  "value": "SKL_MUSHROOM_UP_P",
+  "label": "Pro Tip: Spore Armor",
+  "group": "Special Strengthening",
+  "help": "Power of the mushrooms explosion increased by 100% and eaten Mushroom effect time increased by 100%."
+ },
+ {
+  "value": "SKL_ARRNG_STATUP_ALL_P",
+  "label": "Professional Cosplayer",
+  "group": "Special Strengthening",
+  "help": "Equip a full set of matching armor to increase Defense by 20%, Attack Power by 20%, and chances of a critical hit by 20%."
+ },
+ {
+  "value": "SKL_MSTAR_ABILITY_UP_P",
+  "label": "Propeller Man",
+  "group": "Special Strengthening",
+  "help": "Flail + Cycle Madness armor bonus. Equip 1 piece: Defense +5%. Equip 2: +10%. Equip 3: +20%. Full set: 20% chance of taking 0 damage from attacks. (Excluding Fire damage etc.)"
+ },
+ {
+  "value": "SKL_SANDBAG_01_P",
+  "label": "Punching Bag",
+  "group": "Special Strengthening",
+  "help": "Reduces damage when Guarding."
+ },
+ {
+  "value": "SKL_FIREWRK_ABILITY_UP_P",
+  "label": "Pyrotechnician",
+  "group": "Special Strengthening",
+  "help": "Fireworks + Texas Farmer armor bonus. Equip 1 piece: Defense +10%. Equip 2: +20%. Equip 3: +30%. Full set: 50% chance Fireworks Ammo and Durability won't decrease from regular attacks."
+ },
+ {
+  "value": "SKL_SYLVIA_NMH_00_P",
+  "label": "Queen B",
+  "group": "Special Strengthening",
+  "help": "Equip a full set of matching armor for Attack Power +10%, critical hit rate +10% and 20% chance of taking 0 damage from an attack. (Excludes fire damage, etc.)"
+ },
+ {
+  "value": "SKL_SYLVIA_NMH_02_P",
+  "label": "Queen of Spades",
+  "group": "Special Strengthening",
+  "help": "Equip a full set of matching armor for Attack Power +30%, critical hit rate +20% and 10% chance of taking 0 damage from an attack. (Excludes fire damage, etc.)"
+ },
+ {
+  "value": "SKL_SAMANTHA_K7_02_P",
+  "label": "Queen of the Wolves",
+  "group": "Special Strengthening",
+  "help": "Rage Gauge will now fill 70% faster. Attack Power +30%. for Rage Moves."
+ },
+ {
+  "value": "SKL_ATKDEFUP_HPLOW_02",
+  "label": "Raging Bull",
+  "group": "Special Strengthening",
+  "help": "Increase ATK and DEF by 60% when your HP is at 15% or below."
+ },
+ {
+  "value": "SKL_QOH_P",
+  "label": "Red Queen",
+  "group": "Special Strengthening",
+  "help": "Equip a full set of matching armor for Attack Power +20%, increase max stamina by +80% and 20% chance of taking 0 damage from an attack. (Excludes fire damage, etc.)"
+ },
+ {
+  "value": "SKL_FIRE_DISCOVERY_P",
+  "label": "Resourceful",
+  "group": "Special Strengthening",
+  "help": "Receive the effects of cooked food when using uncooked Mushrooms and Beasts."
+ },
+ {
+  "value": "SKL_FEMALE_GUNMAN_P",
+  "label": "Rio Bravo",
+  "group": "Special Strengthening",
+  "help": "Increases Attack Power of Piercing weapons by 15% and you can reload War Ensemble ranged weapon every 5 seconds with special explosive rounds, dealing 100% more damage."
+ },
+ {
+  "value": "SKL_ARCHERY_ABILITY_UP_P",
+  "label": "Robin Hood",
+  "group": "Special Strengthening",
+  "help": "Archer's Bow + Swimming Master armor bonus. Equip 1 piece: 10% chance of no durability or ammo loss with Normal Attacks. Equip 2: 30%. Equip 3: 50%. Full set: recover 20 HP per second."
+ },
+ {
+  "value": "SKL_ROCKET_ATKUP_01_P",
+  "label": "Rocket Launcher Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Rocket Launchers."
+ },
+ {
+  "value": "SKL_SABER_ATK_UP_01_P",
+  "label": "Saber Addict",
+  "group": "Special Strengthening",
+  "help": "Increases Saber ATK by 30%."
+ },
+ {
+  "value": "SKL_FIREROD_ABILITY_UP_P",
+  "label": "Salamander",
+  "group": "Special Strengthening",
+  "help": "Fire Rod + Priest armor bonus. Equip 1 piece: Recover 10 HP per second. Equip 2: 15. Equip 3: 20. Full set: Swap to or attack with Fire Rod to reload with explosive rounds 12 seconds after, dealing +30% more damage than normal."
+ },
+ {
+  "value": "SKL_SAMANTHA_K7_P",
+  "label": "Samantha",
+  "group": "Special Strengthening",
+  "help": "Rage Gauge will now fill 60% faster. Attack Power +20%. for Rage Moves. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ATKDEFUP_SLASH_01",
+  "label": "Samurai",
+  "group": "Special Strengthening",
+  "help": "Increases the ATK of slashing weapons by 10%."
+ },
+ {
+  "value": "SKL_CIRCLE_SAW_DISMANT_P",
+  "label": "Scrap Yard",
+  "group": "Special Strengthening",
+  "help": "Buzzsaw + DIY Attack armor bonus. 1 piece of armor: Buzzsaw weapon & DIY Attack armor durability loss reduced to 70%. 2 pieces: 50%. 3 pieces: 30%. Full set: Screamers, Haters and Hunters drop Barbmeat Half Portions on kill."
+ },
+ {
+  "value": "SKL_JUST_GUARD_01_P",
+  "label": "Self-Defense",
+  "group": "Special Strengthening",
+  "help": "50% ATK increase after Perfect Guard. Only affects your next attack."
+ },
+ {
+  "value": "SKL_ATKUP_NODMG",
+  "label": "Serial Killer",
+  "group": "Special Strengthening",
+  "help": "Increase ATK by 10% after killing an enemy without taking damage, up to 100% increased damage. Taking damage resets this bonus."
+ },
+ {
+  "value": "SKL_LESS_DIFFUSION_WOT_P",
+  "label": "SHARPSHOOTER",
+  "group": "Special Strengthening",
+  "help": "Bullet spray and recoil reduced when using a War Ensemble ranged weapon. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_SHINOBU_NMH_P",
+  "label": "SHINOBU",
+  "group": "Special Strengthening",
+  "help": "Attack Power +20% for Katanas. 30% chance durability won't decrease with Normal Attacks."
+ },
+ {
+  "value": "SKL_SHOTGUN_ATKUP_01_P",
+  "label": "Shotgun Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Shotguns."
+ },
+ {
+  "value": "SKL_SHOVEL_ATKUP_01_P",
+  "label": "Shovel Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Shovels."
+ },
+ {
+  "value": "SKL_THRWKNIFE_ATKUP_01_P",
+  "label": "Shuriken Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Shurikens."
+ },
+ {
+  "value": "SKL_ANTI_MSR_E_P",
+  "label": "Skillmycin",
+  "group": "Special Strengthening",
+  "help": "Negates the effects of the enemy's Transparungus."
+ },
+ {
+  "value": "SKL_ANTI_MSR_H_P",
+  "label": "Slowmycin",
+  "group": "Special Strengthening",
+  "help": "Negates the effects of Slowmungus when attached to Defense Fighters, Hunters, or Haters."
+ },
+ {
+  "value": "SKL_ATKDEFUP_STRK_01",
+  "label": "Slugger",
+  "group": "Special Strengthening",
+  "help": "Increases the ATK of blunt weapons by 10%."
+ },
+ {
+  "value": "SKL_SNPRRFL_ATKUP_01_P",
+  "label": "Sniper Rifle Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Sniper Rifles."
+ },
+ {
+  "value": "SKL_SPEAR_ATKUP_01_P",
+  "label": "Spear Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Spears."
+ },
+ {
+  "value": "SKL_SPEED_BUSTER_NMH_P",
+  "label": "SPEED BUSTER",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +10% for D.O.D. ARMS weapons and armor."
+ },
+ {
+  "value": "SKL_YOYO_ABILITY_UP_P",
+  "label": "SPIN MASTER",
+  "group": "Special Strengthening",
+  "help": "Yo-Yo + Hard Target armor bonus. Equip 1 piece: Yo-Yo critical hit rate +10%. Equip 2: +20%. Equip 3: +30%. Full set: critical hit damage +30%."
+ },
+ {
+  "value": "SKL_ARRNG_STATUP_SPO",
+  "label": "Sports Enthusiast",
+  "group": "Special Strengthening",
+  "help": "Boosts DEF by 20% when equipped with a complete M.I.L.K. set (head, upper body, lower body)."
+ },
+ {
+  "value": "SKL_NODMG_RANDOM_WOT_P",
+  "label": "STEEL WALL",
+  "group": "Special Strengthening",
+  "help": "20% chance of not taking any damage when hit. (Excluding damage from fire, etc.) (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_ANTI_MSR_I_P",
+  "label": "Stingmycin",
+  "group": "Special Strengthening",
+  "help": "Negates the effects of Stingshroom when attached to Defense Fighters, Hunters, or Haters."
+ },
+ {
+  "value": "SKL_TASERGUN_ATKUP_01_P",
+  "label": "Stun Gun Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Stun Guns."
+ },
+ {
+  "value": "SKL_STUNROD_ATKUP_01_P",
+  "label": "Stun Rod Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Stun Rods."
+ },
+ {
+  "value": "SKL_GUARD_HEADSHOT_P",
+  "label": "Super Helmet",
+  "group": "Special Strengthening",
+  "help": "Reduces additional damage received from headshots by 80% when equipped to Defenders, Hunters or Haters."
+ },
+ {
+  "value": "SKL_GUARD_HEADSHOT_02_P",
+  "label": "Super Helmet 2",
+  "group": "Special Strengthening",
+  "help": "Negates additional damage received from headshots and increases Piercing Res +10% when equipped to Defenders, Hunters or Haters."
+ },
+ {
+  "value": "SKL_R_GAUGE_FORT_UP_02_P",
+  "label": "Super Volcano",
+  "group": "Special Strengthening",
+  "help": "While defending, increases Rage Gauge by 2 when attached to a Defense Fighter."
+ },
+ {
+  "value": "SKL_SUPER_ALLOY",
+  "label": "Superalloy",
+  "group": "Special Strengthening",
+  "help": "Deal 20% more damage to enemies when their HP is 70% or more."
+ },
+ {
+  "value": "SKL_SUPER_ALLOY_DZ_P",
+  "label": "Superalloy Death Zam",
+  "group": "Special Strengthening",
+  "help": "Deal 30% more damage to enemies when their HP is 70% or more. Increases fighters all basic parameters by 8%."
+ },
+ {
+  "value": "SKL_ATKDEFUP_HPMAX_01",
+  "label": "Superhero",
+  "group": "Special Strengthening",
+  "help": "Increase ATK and DEF by 15% when at full health."
+ },
+ {
+  "value": "SKL_SWORD_ATKUP_01_P",
+  "label": "Sword Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Swords."
+ },
+ {
+  "value": "SKL_SYLVIA_NMH_P",
+  "label": "SYLVIA CHRISTEL",
+  "group": "Special Strengthening",
+  "help": "Equip a full set of matching armor for Attack Power +10%, critical hit rate +20% and 10% chance of taking 0 damage from an attack. (Excludes fire damage, etc.)"
+ },
+ {
+  "value": "SKL_DOWN_ATKUP_WOT_P",
+  "label": "T95E2",
+  "group": "Special Strengthening",
+  "help": "Increase attack power during Down Attack by 50%. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_BIKE_ABILITY_UP_P",
+  "label": "Thunder Road",
+  "group": "Special Strengthening",
+  "help": "Motorcycle + Motocross armor bonus. Equip 1 piece: Motorcycle Attack Power +10%. Equip 2: +20%. Equip 3: +30%. Full set: Attack Power for Motorcycle Rage Moves +20%."
+ },
+ {
+  "value": "SKL_THUNDERRD_ATKUP_01_P",
+  "label": "Thunder Rod Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Thunder Rods."
+ },
+ {
+  "value": "SKL_GUN_BURST_WOT_P",
+  "label": "Tiger II",
+  "group": "Special Strengthening",
+  "help": "Switch to or fire a War Ensemble ranged weapon and 5 seconds later you will reload with special explosive rounds, dealing 20% more damage than normal. (A PS4-only decal; it works as a passive on Steam too.)"
+ },
+ {
+  "value": "SKL_SQRTIMBER_ATKUP_01_P",
+  "label": "Timber Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Timber weapons."
+ },
+ {
+  "value": "SKL_TRAVIS_NMH_P",
+  "label": "TRAVIS TOUCHDOWN",
+  "group": "Special Strengthening",
+  "help": "Attack Power +20% for Machetes. Extra +30% increase after a Taunt (Taunt bonuses don't stack and reset after attacking). Equip a Machete to perform Taunts in NO MORE HEROES style!"
+ },
+ {
+  "value": "SKL_ASLTRFL_BULLET_UP_P",
+  "label": "Trigger Happy",
+  "group": "Special Strengthening",
+  "help": "Assault Rifle + Assaultforce armor bonus. When using Normal Attacks, 1 piece of armor: 20% chance of no durability or ammo loss. 2 pieces: 40%, and 3 pieces: 60%. Full set: +15% Assault Rifle Attack Power when HP is full."
+ },
+ {
+  "value": "SKL_FINAL_BLOW_01_P",
+  "label": "Trump Card",
+  "group": "Special Strengthening",
+  "help": "Taunting increases Attack by 20%. Returns to normal after attacking. Effect does not stack."
+ },
+ {
+  "value": "SKL_DRAIN_01",
+  "label": "Vampire",
+  "group": "Special Strengthening",
+  "help": "Recover 7% of damage dealt as HP. The maximum recovery per hit is 7% of your max health."
+ },
+ {
+  "value": "SKL_EXPLODE_DRAIN_P",
+  "label": "Vampire Queen",
+  "group": "Special Strengthening",
+  "help": "Defeated enemies blow up, causing damage all around. Recover 10% of damage dealt as HP. The maximum recovery per hit is 7% of your max health."
+ },
+ {
+  "value": "SKL_REVOLVR_ABILITY_UP_P",
+  "label": "Vigilante",
+  "group": "Special Strengthening",
+  "help": "Magnum + Iron Eagle armor bonus. Equip 1 piece: max of +10% damage the closer you attack. Equip 2: 20%. Equip 3: 30%. Full set: +100% Magnum Attack Power after dodging. Resets after each attack. Doesn't stack."
+ },
+ {
+  "value": "SKL_ATKUP_SANDS_P",
+  "label": "Violence Class",
+  "group": "Special Strengthening",
+  "help": "Boosts ATK of blunt weapons and slashing weapons by 40%."
+ },
+ {
+  "value": "SKL_R_GAUGE_FORT_UP_01_P",
+  "label": "Volcano",
+  "group": "Special Strengthening",
+  "help": "While defending, increases Rage Gauge by 1 when attached to a Defense Fighter."
+ },
+ {
+  "value": "SKL_WARRIORS_01_P",
+  "label": "Warrior Monk",
+  "group": "Special Strengthening",
+  "help": "Increases Attack Power of Slash and Blunt weapons by 30%, and Piercing Res by 20%."
+ },
+ {
+  "value": "SKL_ARCWELD_ATKUP_01_P",
+  "label": "Welding Gun Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Welding Guns."
+ },
+ {
+  "value": "SKL_WHITEFEATHER_P",
+  "label": "White Feather",
+  "group": "Special Strengthening",
+  "help": "Increase weapon's Piercing Effect ATK by 15% attack power during Headshot by 70％. Bullet spray and recoil reduced when using a War Ensemble ranged weapon."
+ },
+ {
+  "value": "SKL_FAN_UP_01",
+  "label": "Wizard",
+  "group": "Special Strengthening",
+  "help": "Attack Power and Defense +7% for CANDLE WOLF weapons and armor."
+ },
+ {
+  "value": "SKL_EMPHAND_ABILITY_UP_P",
+  "label": "Wrestlemaniac",
+  "group": "Special Strengthening",
+  "help": "Fists + Killer Wrestler armor bonus. Equip 1 piece: speed of stamina consumption during Dash and stamina consumption for Dodge -30%. Equip 2: -40%. Equip 3: -50%. Full set: adds knockback and AoE effect to dropkicks."
+ },
+ {
+  "value": "SKL_YOYO_ATKUP_01_P",
+  "label": "Yo-Yo Addict",
+  "group": "Special Strengthening",
+  "help": "Attack Power +30% for Yo-Yos."
+ }
+]

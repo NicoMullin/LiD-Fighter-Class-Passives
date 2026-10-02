@@ -1,0 +1,102 @@
+# Builds dinput8.dll from the source in this repository and runs the tests on
+# every push. Pushing a tag such as v1.0.0 also publishes a release: the DLL
+# built here, the Fighter Class Passives mod, their SHA-256 sums and a signed
+# record (attestation) tying the DLL to this workflow run and commit.
+
+name: Build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install Zig
+        run: python -m pip install ziglang==0.16.0
+
+      - name: Build and test dinput8.dll
+        shell: pwsh
+        run: |
+          if ($env:GITHUB_REF_TYPE -eq 'tag') {
+            python build.py --test --tag $env:GITHUB_REF_NAME
+          } else {
+            python build.py --test
+          }
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+
+      - name: Package the release files
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory release | Out-Null
+          Copy-Item out/dinput8.dll release/
+          Compress-Archive -Path mods/fighter-passives -DestinationPath release/fighter-passives.zip
+          $sums = Get-ChildItem release -File | ForEach-Object {
+            "{0}  {1}" -f (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower(), $_.Name
+          }
+          $sums | Set-Content -Encoding ascii release/SHA256SUMS.txt
+          Get-Content release/SHA256SUMS.txt
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: release
+          path: release/
+          if-no-files-found: error
+
+  release:
+    if: github.ref_type == 'tag'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # create the release
+      id-token: write       # sign the attestation
+      attestations: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: release
+          path: release
+
+      - uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: |
+            release/dinput8.dll
+            release/fighter-passives.zip
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          {
+            echo "Built by GitHub Actions from commit ${GITHUB_SHA} - [build log and tests](${RUN_URL})."
+            echo
+            echo "| File | SHA-256 |"
+            echo "|---|---|"
+            tr -d '\r' < release/SHA256SUMS.txt | awk -v q='`' '{ printf "| %s | %s%s%s |\n", $2, q, $1, q }'
+            echo
+            echo "**Check the DLL is the one built here**, with the [GitHub CLI](https://cli.github.com/):"
+            echo
+            echo '```'
+            echo "gh attestation verify dinput8.dll --repo ${REPO}"
+            echo '```'
+            echo
+            echo "Or rebuild it yourself and compare the SHA-256 - see **Building it yourself** in the README."
+          } > notes.md
+          gh release create "$TAG" release/dinput8.dll release/fighter-passives.zip release/SHA256SUMS.txt \
+            --repo "$REPO" --title "$TAG" --notes-file notes.md
