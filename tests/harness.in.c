@@ -1,6 +1,6 @@
 /* Stand-in for BrgGame-Steam.exe: the status reset, a skill loop
  * with the five cases in the game's byte shapes, and the pause map's four
- * checks. Loads dinput8.dll from its own folder and runs every case. */
+ * checks. Loads lid-classpassives.dll from its own folder and runs every case. */
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <stdint.h>
@@ -65,13 +65,7 @@ static void skill(const wchar_t *type)       /* one fighter with one skill */
 
 int main(void)
 {
-    typedef HRESULT (WINAPI *create_fn)(HINSTANCE, DWORD, const GUID *, void **, void *);
-    static const GUID IID_IDirectInput8W =
-        {0xBF798031, 0x483A, 0x4DA2, {0xAA, 0x99, 0x5D, 0x64, 0xED, 0x36, 0x97, 0x00}};
     HMODULE dll;
-    void *di = NULL;
-    create_fn create;
-    HRESULT hr;
 
     vtable[0x1038 / 8] = (void *)eq0; vtable[0x1040 / 8] = (void *)eq1;
     vtable[0x1048 / 8] = (void *)eq2; vtable[0x1050 / 8] = (void *)eq3;
@@ -85,7 +79,7 @@ int main(void)
     expect("PATROL DUTY sets nothing (stock)", flags() & ~0x209Fu, 0);
     render("map, nothing equipped (stock)", 0,0,0,0, 0,0,0,0);
 
-    dll = LoadLibraryW(L"dinput8.dll");
+    dll = LoadLibraryW(L"lid-classpassives.dll");
     if (!dll) { printf("LoadLibrary failed %lu\n", GetLastError()); return 2; }
     puts("-- with the DLL");
 
@@ -116,13 +110,6 @@ int main(void)
     set_ptr(pausemap + 0x68, NULL);
     render("map: no UI manager", 0,0,0,0, 0,0,0,0);
 
-    create = (create_fn)GetProcAddress(dll, "DirectInput8Create");
-    hr = create ? create(GetModuleHandleW(NULL), 0x0800, &IID_IDirectInput8W, &di, NULL) : E_FAIL;
-    expect("DirectInput8Create passes through (S_OK)", (unsigned)hr, 0);
-    if (di) {
-        typedef ULONG (WINAPI *release_fn)(void *);
-        ((release_fn)(*(void ***)di)[2])(di);
-    }
     printf(fails ? "\n%d FAILED\n" : "\nall passed\n", fails);
     return fails != 0;
 }

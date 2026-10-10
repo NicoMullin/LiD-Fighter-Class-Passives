@@ -1,7 +1,8 @@
-# Builds dinput8.dll from the source in this repository and runs the tests on
-# every push. Pushing a tag such as v1.0.0 also publishes a release: the DLL
-# built here, the Fighter Class Passives mod, their SHA-256 sums and a signed
-# record (attestation) tying the DLL to this workflow run and commit.
+# Builds lid-classpassives.dll (a plugin for the LiD Plugin Loader) from the source in
+# this repository and runs the tests on every push. Pushing a tag such as v2.0.0
+# also publishes a release: the plugin built here, the Fighter Class Passives
+# mod, their SHA-256 sums and a signed record (attestation) tying the DLL to
+# this workflow run and commit.
 
 name: Build
 
@@ -28,13 +29,13 @@ jobs:
       - name: Install Zig
         run: python -m pip install ziglang==0.16.0
 
-      - name: Build and test dinput8.dll
+      - name: Build and test lid-classpassives.dll
         shell: pwsh
         run: |
           if ($env:GITHUB_REF_TYPE -eq 'tag') {
-            python build.py --test --tag $env:GITHUB_REF_NAME
+            python build.py --test --package --tag $env:GITHUB_REF_NAME
           } else {
-            python build.py --test
+            python build.py --test --package
           }
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
 
@@ -42,8 +43,8 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory release | Out-Null
-          Copy-Item out/dinput8.dll release/
-          Compress-Archive -Path mods/fighter-passives -DestinationPath release/fighter-passives.zip
+          Copy-Item out/lid-classpassives.dll release/
+          Copy-Item out/LiD-Fighter-Class-Passives.zip release/
           $sums = Get-ChildItem release -File | ForEach-Object {
             "{0}  {1}" -f (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower(), $_.Name
           }
@@ -73,8 +74,8 @@ jobs:
       - uses: actions/attest-build-provenance@v4
         with:
           subject-path: |
-            release/dinput8.dll
-            release/fighter-passives.zip
+            release/lid-classpassives.dll
+            release/LiD-Fighter-Class-Passives.zip
 
       - name: Publish the release
         env:
@@ -93,10 +94,16 @@ jobs:
             echo "**Check the DLL is the one built here**, with the [GitHub CLI](https://cli.github.com/):"
             echo
             echo '```'
-            echo "gh attestation verify dinput8.dll --repo ${REPO}"
+            echo "gh attestation verify lid-classpassives.dll --repo ${REPO}"
             echo '```'
             echo
             echo "Or rebuild it yourself and compare the SHA-256 - see **Building it yourself** in the README."
           } > notes.md
-          gh release create "$TAG" release/dinput8.dll release/fighter-passives.zip release/SHA256SUMS.txt \
-            --repo "$REPO" --title "$TAG" --notes-file notes.md
+          files="release/lid-classpassives.dll release/LiD-Fighter-Class-Passives.zip release/SHA256SUMS.txt"
+          if gh release view "$TAG" --repo "$REPO" > /dev/null 2>&1; then
+            # made on the website: add the files to it
+            gh release upload "$TAG" $files --repo "$REPO" --clobber
+            gh release edit "$TAG" --repo "$REPO" --notes-file notes.md
+          else
+            gh release create "$TAG" $files --repo "$REPO" --title "$TAG" --notes-file notes.md
+          fi

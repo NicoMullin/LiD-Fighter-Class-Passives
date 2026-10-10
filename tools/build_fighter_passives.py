@@ -141,7 +141,7 @@ def passives_sql() -> str:
 --
 -- For each class: a hidden copy of the chosen decal as SKL_FTYPE_<class>, and
 -- Treasure Hunter as SKL_FMAP_<class> when the map reveal is on. The passive
--- hook in BrgGame.upk adds both to the fighter's skills; dinput8.dll makes the
+-- hook in BrgGame.upk adds both to the fighter's skills; lid-classpassives.dll makes the
 -- pause map honour the map reveals. Every {{...}} is filled in by the mod
 -- manager from the Configuration tab: a decal id (letters, digits and
 -- underscores only) or 1/0.
@@ -182,9 +182,9 @@ def mod_json(game_version: str) -> dict:
         "description": (
             "Give each fighter class a skill decal that is always on, without taking a "
             "decal slot, and optionally the full pause-map reveal. Adds its own passive "
-            "hook to BrgGame.upk; the map reveals also need dinput8.dll - see the readme."
+            "hook to BrgGame.upk; the map reveals also need lid-classpassives.dll - see the readme."
         ),
-        "version": "0.2.0",
+        "version": "0.2.1",
         "author": "KSFA",
         "category": "Game content",
         "tags": ["fighters", "decals", "passives", "map"],

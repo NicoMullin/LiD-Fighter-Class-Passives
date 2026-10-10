@@ -1,9 +1,9 @@
 /*
- * dinput8.dll for Let It Die - changes game code in memory only.
+ * lid-classpassives.dll for Let It Die - a plugin for the LiD Plugin Loader that
+ * changes game code in memory only.
  *
- * The game loads dinput8.dll from its own folder first. This file passes every
- * DirectInput call to the real dinput8.dll in the Windows system folder, and
- * when it loads it changes the running game (never the exe on disk) so the
+ * The loader (dinput8.dll) loads this from Binaries\Win64\lid-plugins when the
+ * game starts. It changes the running game (never the exe on disk) so the
  * pause map's reveals follow the fighter's skill list, not only the decals
  * equipped in the save. That is where a fighter-type passive from BrgGame.upk
  * lands.
@@ -27,9 +27,9 @@
  *     update that moves the code, the DLL does nothing at all.
  *   - Changed in the game: one byte in the status reset, four 5-byte calls in
  *     the skill code and four calls in the pause map.
- *   - No network, no registry. The only file it writes is lid_dll.log next to
- *     itself.
- *   - Delete dinput8.dll and the game is exactly stock again.
+ *   - No network, no registry. The only file it writes is lid-classpassives.log next
+ *     to itself.
+ *   - Delete lid-classpassives.dll and the game is exactly stock again.
  */
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
@@ -75,62 +75,6 @@ static void log_line(const char *fmt, ...)
     g_log_started = 1;
     WriteFile(f, msg, (DWORD)n, &written, NULL);
     CloseHandle(f);
-}
-
-/* ------------------------------------------------- the real dinput8.dll */
-
-static HMODULE g_real;
-
-static FARPROC real_proc(const char *name)
-{
-    if (!g_real) {
-        wchar_t path[MAX_PATH];
-        UINT n = GetSystemDirectoryW(path, MAX_PATH);
-        if (n == 0 || n > MAX_PATH - 16)
-            return NULL;
-        wcscat(path, L"\\dinput8.dll");
-        g_real = LoadLibraryW(path);
-        if (!g_real) {
-            log_line("could not load the system dinput8.dll (error %lu)", GetLastError());
-            return NULL;
-        }
-    }
-    return GetProcAddress(g_real, name);
-}
-
-typedef HRESULT (WINAPI *create_fn)(HINSTANCE, DWORD, const GUID *, void **, void *);
-typedef HRESULT (WINAPI *classobj_fn)(const GUID *, const GUID *, void **);
-typedef HRESULT (WINAPI *void_fn)(void);
-
-HRESULT WINAPI Proxy_DirectInput8Create(HINSTANCE inst, DWORD version, const GUID *riid,
-                                        void **out, void *outer)
-{
-    create_fn f = (create_fn)real_proc("DirectInput8Create");
-    return f ? f(inst, version, riid, out, outer) : E_FAIL;
-}
-
-HRESULT WINAPI Proxy_DllGetClassObject(const GUID *clsid, const GUID *riid, void **out)
-{
-    classobj_fn f = (classobj_fn)real_proc("DllGetClassObject");
-    return f ? f(clsid, riid, out) : E_FAIL;
-}
-
-HRESULT WINAPI Proxy_DllCanUnloadNow(void)
-{
-    void_fn f = (void_fn)real_proc("DllCanUnloadNow");
-    return f ? f() : S_FALSE;
-}
-
-HRESULT WINAPI Proxy_DllRegisterServer(void)
-{
-    void_fn f = (void_fn)real_proc("DllRegisterServer");
-    return f ? f() : E_FAIL;
-}
-
-HRESULT WINAPI Proxy_DllUnregisterServer(void)
-{
-    void_fn f = (void_fn)real_proc("DllUnregisterServer");
-    return f ? f() : E_FAIL;
 }
 
 /* ------------------------------------------------ what gets changed */
@@ -576,6 +520,24 @@ static int running_in_the_game(void)
     return _wcsicmp(name, L"BrgGame-Steam.exe") == 0;
 }
 
+/* Earlier builds of this plugin were called lid-fighter.dll. With both
+ * in lid-plugins the two would make the same changes, so the new name gives
+ * way to the old one until it is deleted. */
+static int old_name_beside_me(void)
+{
+    wchar_t old[MAX_PATH];
+    wchar_t *slash;
+
+    if (!g_log_path[0] || wcslen(g_log_path) >= MAX_PATH)
+        return 0;
+    wcscpy(old, g_log_path);
+    slash = wcsrchr(old, L'\\');
+    if (!slash || (size_t)(slash - old) + 17 >= MAX_PATH)
+        return 0;
+    wcscpy(slash + 1, L"lid-fighter.dll");
+    return GetFileAttributesW(old) != INVALID_FILE_ATTRIBUTES;
+}
+
 BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID reserved)
 {
     if (reason == DLL_PROCESS_ATTACH) {
@@ -584,18 +546,23 @@ BOOL WINAPI DllMain(HINSTANCE inst, DWORD reason, LPVOID reserved)
 
         DisableThreadLibraryCalls(inst);
         n = GetModuleFileNameW(inst, g_log_path, MAX_PATH);
-        slash = (n && n < MAX_PATH - 16) ? wcsrchr(g_log_path, L'\\') : NULL;
+        slash = (n && n < MAX_PATH - 32) ? wcsrchr(g_log_path, L'\\') : NULL;
         if (slash)
-            wcscpy(slash + 1, L"lid_dll.log");
+            wcscpy(slash + 1, L"lid-classpassives.log");
         else
             g_log_path[0] = 0;
 
         if (!running_in_the_game())
-            return TRUE;    /* some other program - pass-through only */
-        log_line("LiD Fighter Mod dinput8.dll " LID_DLL_VERSION " loaded");
+            return TRUE;    /* some other program - change nothing */
+        log_line("LiD Fighter Class Passives lid-classpassives.dll " LID_DLL_VERSION " loaded");
+        if (old_name_beside_me()) {
+            log_line("lid-fighter.dll (this plugin's old name) is in the same folder and makes the "
+                     "same changes, so this copy stays out of its way - nothing changed. Delete "
+                     "lid-fighter.dll and this one takes over.");
+            return TRUE;
+        }
         patch_game();
-    } else if (reason == DLL_PROCESS_DETACH && reserved == NULL && g_real) {
-        FreeLibrary(g_real);
     }
+    (void)reserved;
     return TRUE;
 }

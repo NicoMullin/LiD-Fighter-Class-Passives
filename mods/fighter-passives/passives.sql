@@ -2,7 +2,7 @@
 --
 -- For each class: a hidden copy of the chosen decal as SKL_FTYPE_<class>, and
 -- Treasure Hunter as SKL_FMAP_<class> when the map reveal is on. The passive
--- hook in BrgGame.upk adds both to the fighter's skills; dinput8.dll makes the
+-- hook in BrgGame.upk adds both to the fighter's skills; lid-classpassives.dll makes the
 -- pause map honour the map reveals. Every {{...}} is filled in by the mod
 -- manager from the Configuration tab: a decal id (letters, digits and
 -- underscores only) or 1/0.

@@ -1,3 +1,14 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# The same bytes on every machine - GitHub's Windows builders included - so a
+# release package rebuilds byte for byte from a fresh checkout, and Git never
+# warns about converting line endings.
+* text=auto eol=lf
+
+# Never convert these.
+*.dll binary
+*.exe binary
+*.lib binary
+*.upk binary
 *.PackagePatch binary
+*.zip binary
+*.png binary
+*.ico binary

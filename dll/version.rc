@@ -16,12 +16,12 @@ BEGIN
         BLOCK "040904B0"
         BEGIN
             VALUE "CompanyName",      "KSFA"
-            VALUE "FileDescription",  "Let It Die Fighter Mod - DirectInput pass-through"
+            VALUE "FileDescription",  "Let It Die Fighter Class Passives - plugin for the LiD Plugin Loader"
             VALUE "FileVersion",      LID_DLL_VERSION
-            VALUE "InternalName",     "dinput8"
+            VALUE "InternalName",     "lid-classpassives"
             VALUE "LegalCopyright",   "MIT License"
-            VALUE "OriginalFilename", "dinput8.dll"
-            VALUE "ProductName",      "LiD Fighter Mod"
+            VALUE "OriginalFilename", "lid-classpassives.dll"
+            VALUE "ProductName",      "LiD Fighter Class Passives"
             VALUE "ProductVersion",   LID_DLL_VERSION
         END
     END

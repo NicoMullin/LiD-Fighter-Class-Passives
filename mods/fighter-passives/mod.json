@@ -1,8 +1,8 @@
 {
   "id": "fighter-passives",
   "name": "Fighter Class Passives",
-  "description": "Give each fighter class a skill decal that is always on, without taking a decal slot, and optionally the full pause-map reveal. Adds its own passive hook to BrgGame.upk; the map reveals also need dinput8.dll - see the readme.",
-  "version": "0.2.0",
+  "description": "Give each fighter class a skill decal that is always on, without taking a decal slot, and optionally the full pause-map reveal. Adds its own passive hook to BrgGame.upk; the map reveals also need lid-classpassives.dll - see the readme.",
+  "version": "0.2.1",
   "author": "KSFA",
   "category": "Game content",
   "tags": [

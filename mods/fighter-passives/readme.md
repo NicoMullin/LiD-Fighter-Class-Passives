@@ -21,15 +21,20 @@ The mod has two parts, and the manager installs both:
   that changes it is switched off. Like any changed game package, it needs the
   game's file check switched off (Tools > Hash Patcher).
 
-One piece is installed by hand:
+And one piece goes in the game folder:
 
-- **`dinput8.dll` in `Binaries\Win64`**, from the releases page of
-  [LiD Fighter Mod](https://github.com/NicoMullin/LiD-Fighter-Mod/releases).
-  The pause map only asks the save whether Treasure Hunter, Spy, PATROL DUTY,
-  Iwazaru or Coyote Smith is equipped. The DLL makes it accept the passive
-  too, in memory only - the game's exe is not changed. Only the map reveals
-  need it; every other passive works without it. The manager never installs
-  DLLs.
+- **`lid-classpassives.dll` in `Binaries\Win64\lid-plugins`**, a plugin for the
+  [LiD Plugin Loader](https://github.com/NicoMullin/LiD-Plugin-Loader), which
+  is installed once and loads every plugin in that folder. The pause map only
+  asks the save whether Treasure Hunter, Spy, PATROL DUTY, Iwazaru or Coyote
+  Smith is equipped. The plugin makes it accept the passive too, in memory
+  only - the game's exe is not changed. Only the map reveals need it; every
+  other passive works without it.
+
+  The manager's **Get mods...** window puts it there (with the loader, if you
+  do not have it yet) when it gets this mod from
+  [its GitHub page](https://github.com/NicoMullin/LiD-Fighter-Class-Passives/releases);
+  by hand, it is in that release's `LiD-Fighter-Class-Passives.zip`.
 
 ## Good to know
 
