@@ -64,3 +64,11 @@ It holds only the new `GetSkillArray` function and checks the names and
 objects it relies on before anything is applied, so after a game update that
 moves them the manager refuses it rather than forcing it. Run the tool again
 on the new `BrgGame.upk` then.
+
+## Switched with this mod
+
+From LiD DB Editor 0.12.8, saving with this mod ticked switches
+`lid-classpassives.dll` on, and saving with it unticked switches it off:
+renamed to `.dll.off`, which the Plugin Loader skips. Nothing is deleted, and
+ticking the mod again brings it back. Close the game first. The plugin is only
+needed for the map reveals; without it the manager only mentions it.
