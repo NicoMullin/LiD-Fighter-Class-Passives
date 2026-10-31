@@ -66,6 +66,10 @@ jobs:
       id-token: write       # sign the attestation
       attestations: write
     steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0    # the commits since the last tag, for the Discord card
+
       - uses: actions/download-artifact@v8
         with:
           name: release
@@ -107,3 +111,70 @@ jobs:
           else
             gh release create "$TAG" $files --repo "$REPO" --title "$TAG" --notes-file notes.md
           fi
+
+      - name: Post the release to Discord
+        # A card in the Discord server's #dll-mod-updates channel: the download,
+        # what's new, the hash and the VirusTotal report. Only when the
+        # repository has a DISCORD_DLL_UPDATES_WEBHOOK secret. The release is out
+        # already, so a Discord problem only marks this step.
+        continue-on-error: true
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_DLL_UPDATES_WEBHOOK }}
+          TAG: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+          SERVER: ${{ github.server_url }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK" ]; then
+            echo "No DISCORD_DLL_UPDATES_WEBHOOK secret, so nothing was posted to Discord."
+            exit 0
+          fi
+          name="${REPO#*/}"
+          zip="$name.zip"
+          sha=$(tr -d '\r' < release/SHA256SUMS.txt | awk -v f="$zip" '$2 == f { print toupper($1) }')
+
+          # What's new: the commits since the last tag, newest first. A commit
+          # with a body gives its body (joined into one line), one without gives
+          # its subject; messages that only name a version are left out.
+          prev=$(git describe --tags --abbrev=0 "$TAG^" 2>/dev/null || true)
+          range="$TAG"
+          if [ -n "$prev" ]; then range="$prev..$TAG"; fi
+          news=$(git log "$range" --no-merges --format='%s%x1f%b%x1e' | awk '
+            BEGIN { RS = "\036"; FS = "\037" }
+            {
+              s = $1; b = $2
+              gsub(/\n/, " ", s); gsub(/\n/, " ", b)
+              gsub(/^ +| +$/, "", s); gsub(/  +/, " ", b); gsub(/^ +| +$/, "", b)
+              if (b ~ /^v?[0-9]+(\.[0-9]+)+$/) b = ""
+              line = (b != "") ? b : s
+              if (line == "" || line ~ /^v?[0-9]+(\.[0-9]+)+$/ || seen[line]++) next
+              print "- " line
+            }')
+
+          jq -n \
+            --arg title "${name//-/ } $TAG" \
+            --arg page "$SERVER/$REPO/releases/tag/$TAG" \
+            --arg zip "$zip" \
+            --arg zipurl "$SERVER/$REPO/releases/download/$TAG/$zip" \
+            --arg whatsnew "What's new" \
+            --arg news "$news" \
+            --arg sha "$sha" \
+            --arg day "$(date -u +%F)" '
+            ($news | if length > 1000 then .[0:990] + "…" else . end) as $n |
+            {
+              allowed_mentions: { parse: [] },
+              embeds: [{
+                title: $title,
+                url: $page,
+                color: 10181046,
+                description: "**[Download from GitHub](\($zipurl))** (`\($zip)`)\n\nIn the mod manager, click **Get mods** to update it.",
+                fields: (
+                  (if $n != "" then [{ name: $whatsnew, value: $n }] else [] end)
+                  + (if $sha != "" then [{
+                      name: "Check your download",
+                      value: "SHA-256: `\($sha)`\n[VirusTotal report](https://www.virustotal.com/gui/file/\($sha)) - [Release page](\($page))"
+                    }] else [] end)
+                ),
+                footer: { text: "Released \($day)" }
+              }]
+            }' > discord.json
+          curl -fsS -H "Content-Type: application/json" -d @discord.json "$DISCORD_WEBHOOK"
