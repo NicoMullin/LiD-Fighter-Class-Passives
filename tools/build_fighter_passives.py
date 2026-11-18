@@ -174,7 +174,7 @@ def mod_json(game_version: str) -> dict:
             "type": "toggle",
             "group": name,
             "default": False,
-            "help": "The Treasure Hunter reveal on its own, on top of the decal above.",
+            "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs.",
         })
     return {
         "id": "fighter-passives",

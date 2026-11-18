@@ -2,7 +2,7 @@
   "id": "fighter-passives",
   "name": "Fighter Class Passives",
   "description": "Give each fighter class a skill decal that is always on, without taking a decal slot, and optionally the full pause-map reveal. Adds its own passive hook to BrgGame.upk; the map reveals also need lid-classpassives.dll - see the readme.",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "KSFA",
   "category": "Game content",
   "tags": [
@@ -31,7 +31,7 @@
       "type": "toggle",
       "group": "All-rounder",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     },
     {
       "id": "bre_skill",
@@ -47,7 +47,7 @@
       "type": "toggle",
       "group": "Striker",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     },
     {
       "id": "col_skill",
@@ -63,7 +63,7 @@
       "type": "toggle",
       "group": "Collector",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     },
     {
       "id": "tec_skill",
@@ -79,7 +79,7 @@
       "type": "toggle",
       "group": "Attacker",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     },
     {
       "id": "def_skill",
@@ -95,7 +95,7 @@
       "type": "toggle",
       "group": "Defender",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     },
     {
       "id": "sht_skill",
@@ -111,7 +111,7 @@
       "type": "toggle",
       "group": "Shooter",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     },
     {
       "id": "luk_skill",
@@ -127,7 +127,7 @@
       "type": "toggle",
       "group": "Lucky Star",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     },
     {
       "id": "ski_skill",
@@ -143,7 +143,7 @@
       "type": "toggle",
       "group": "Skill Master",
       "default": false,
-      "help": "The Treasure Hunter reveal on its own, on top of the decal above."
+      "help": "This toggleable option will reveal the whole floor map as well as all mushrooms, items, chests and NPCs."
     }
   ],
   "patches": [

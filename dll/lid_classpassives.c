@@ -21,12 +21,23 @@
  * flag word (bits 25-31 are not used by the game). The status reset is changed
  * to clear those spare bits too, so they never outlive the skill list.
  *
+ * Since 2.0.5, Treasure Hunter or Spy (decal or class passive) also lifts the
+ * map's fog: each floor's whole map is uncovered as you arrive, on the pause
+ * map and the HUD minimap. The game uncovers the fog by queuing "sprays" as you
+ * walk (UIMiniMapManager.MiniMap_AddArrivedPoint(hexagon, x, y), x and y 0-128
+ * across a map hexagon) and marking the hexagon's explored grid; its paint call
+ * (MiniMap_UpdateArrivedRate, every frame) draws the sprays. The paint call's
+ * slot in the minimap's function table is sent through a small function that
+ * first sprays every hexagon (5 x 5, at 1.5 x the walking size) and marks its
+ * grid, once per floor and area.
+ *
  * Safety rules:
  *   - Every piece is found by its exact bytes and must be found exactly once.
  *     Anything not found is left alone and named in the log. After a game
  *     update that moves the code, the DLL does nothing at all.
  *   - Changed in the game: one byte in the status reset, four 5-byte calls in
- *     the skill code and four calls in the pause map.
+ *     the skill code, four calls in the pause map and one pointer in the
+ *     minimap's function table.
  *   - No network, no registry. The only file it writes is lid-classpassives.log next
  *     to itself.
  *   - Delete lid-classpassives.dll and the game is exactly stock again.
@@ -83,7 +94,12 @@ static void log_line(const char *fmt, ...)
  * game's own minimap code, which reads the same chain. */
 #define PAUSEMAP_UIMANAGER   0x68     /* UBrgUIMenuPart_PauseMap -> UBrgUIManager */
 #define UIMANAGER_PLAYERPAWN 0x2D4C   /* mPlayerCommonPawnNative                  */
-#define PAWN_SKILLFLAGS      0x479C   /* mSkillStatus (0x472C) + 0x70 flag word   */
+
+/* Where the fighter's skill flag word (mSkillStatus + 0x70) sits in the pawn.
+ * It moves between game builds (0x479C up to 1.92, 0x47BC in 1.93), so it is
+ * read from the game's own HUD minimap code at start-up (see find_flag_word);
+ * 0 = not found, and then only really equipped decals count. */
+static uint32_t g_flags_at;
 
 #define FLAG_SEARCHUP_ITEM 0x00100000u /* bSearchUpItem, set by Treasure Hunter */
 #define BIT_SPY            0x02000000u
@@ -141,8 +157,8 @@ int map_check(const unsigned char *pausemap, int equipped, int which)
 
     ui = pausemap ? read_ptr(pausemap + PAUSEMAP_UIMANAGER) : NULL;
     pawn = ui ? read_ptr(ui + UIMANAGER_PLAYERPAWN) : NULL;
-    if (pawn) {
-        memcpy(&flags, pawn + PAWN_SKILLFLAGS, sizeof flags);
+    if (pawn && g_flags_at) {
+        memcpy(&flags, pawn + g_flags_at, sizeof flags);
         passive = (flags & c->flags) != 0;
     }
     result = (equipped == 1 || passive) ? 1 : equipped;
@@ -348,9 +364,230 @@ static unsigned char *find_case(struct span text, struct span rdata, const wchar
     return hits == 1 ? hit : NULL;
 }
 
+/* HUD minimap: mov rax,[rcx+0x2D4C] / test dword [rax+X],0x100000 - X is the
+ * fighter's skill flag word (bSearchUpItem = Treasure Hunter). */
+static const unsigned char FLAGS_PATTERN[] = {
+    0x48, 0x8B, 0x81, 0x4C, 0x2D, 0x00, 0x00, 0xF7, 0x80, 0, 0, 0, 0, 0x00, 0x00, 0x10, 0x00,
+};
+static const char FLAGS_MASK[] = "xxxxxxxxx????xxxx";
+#define FLAGS_DISP_AT 9
+
+static uint32_t find_flag_word(struct span text)
+{
+    unsigned char *hit = NULL;
+    uint32_t at;
+    int n = find_all(text, FLAGS_PATTERN, FLAGS_MASK, &hit);
+
+    if (n != 1) {
+        log_line("fighter flags: HUD minimap code found %d times (needs exactly 1)", n);
+        return 0;
+    }
+    memcpy(&at, hit + FLAGS_DISP_AT, sizeof at);
+    if (at < 0x1000 || at > 0x10000 || (at & 3)) {
+        log_line("fighter flags: the HUD minimap code reads offset 0x%X, which does not look right", at);
+        return 0;
+    }
+    return at;
+}
+
 static unsigned char *call_target(unsigned char *call)
 {
     return call + 5 + read32(call + 1);
+}
+
+/* ------------------------------------------------------- the map's fog */
+
+/* UIMiniMapManager.MiniMap_UpdateArrivedRate(HUD), the start: mov rax,rsp /
+ * mov [rax+0x10],rdx / push rdi / push r12 / sub rsp,0x118 /
+ * cmp qword [rcx+0xBC],0 (mUnitArrivedRateTexture) / mov r12,rdx / mov rdi,rcx / je */
+static const unsigned char UPDATE_PATTERN[] = {
+    0x48, 0x8B, 0xC4, 0x48, 0x89, 0x50, 0x10, 0x57, 0x41, 0x54, 0x48, 0x81, 0xEC, 0x18, 0x01, 0x00,
+    0x00, 0x48, 0x83, 0xB9, 0xBC, 0x00, 0x00, 0x00, 0x00, 0x4C, 0x8B, 0xE2, 0x48, 0x8B, 0xF9, 0x0F,
+    0x84,
+};
+static const char UPDATE_MASK[] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+#define UPDATE_SLOT 0x450
+#define ADD_SLOT    0x350
+
+/* MiniMap_AddArrivedPoint(cell, x, y), the start: mov [rsp+8],rbx / push rdi /
+ * sub rsp,0x60 / mov eax,[rcx+0x94] (mSprayLifeTime) / movsxd rdi,[rcx+0x11C]
+ * (mSprayObjects' count) / mov rbx,rcx */
+static const unsigned char ADD_START[] = {
+    0x48, 0x89, 0x5C, 0x24, 0x08, 0x57, 0x48, 0x83, 0xEC, 0x60, 0x8B, 0x81, 0x94, 0x00, 0x00, 0x00,
+    0x48, 0x63, 0xB9, 0x1C, 0x01, 0x00, 0x00, 0x48, 0x8B, 0xD9,
+};
+
+/* Pieces of those two functions that show the layout below is this build's. */
+struct piece {
+    const unsigned char *bytes;
+    size_t size;
+    const char *what;
+};
+static const struct piece UPDATE_PIECES[] = {
+    {(const unsigned char *)"\x8B\x87\xCC\x00\x00\x00\xA8\x01", 8, "the new-floor flag (+0xCC)"},
+    {(const unsigned char *)"\x48\x8B\x87\x40\x01\x00\x00\x42\x3B\x6C\x38\x24", 12, "the hexagons (+0x140, grid count +0x24)"},
+    {(const unsigned char *)"\x4B\x8B\x44\x3E\x1C", 5, "a hexagon's grid (+0x1C)"},
+    {(const unsigned char *)"\x4D\x6B\xFF\x2C", 4, "a hexagon's size (0x2C)"},
+};
+static const struct piece ADD_PIECES[] = {
+    {(const unsigned char *)"\x48\x03\x83\x14\x01\x00\x00", 7, "the sprays (+0x114)"},
+    {(const unsigned char *)"\x48\x6B\xC0\x1C", 4, "a spray's size (0x1C)"},
+    {(const unsigned char *)"\xF3\x0F\x11\x48\x04", 5, "a spray's x (+4)"},
+    {(const unsigned char *)"\xF3\x0F\x11\x78\x18", 5, "a spray's scale (+0x18)"},
+};
+
+#define MM_UIMANAGER  0x60     /* UIMiniMapManager -> UIManager                   */
+#define MM_FLAGS      0xCC     /* bit 0 mbUnitArrivedRateNewFlag, bit 1 AlwaysZero */
+#define MM_SPRAYS     0x114    /* TArray<SprayObject>: data, count at +8          */
+#define MM_CELLS      0x140    /* TArray<MiniMapCellInfo>: data, count at +8      */
+#define CELL_SIZE     0x2C
+#define CELL_FAR      0x00     /* bit 0 mIsFarCell                                */
+#define CELL_RATES    0x1C     /* TArray<float> mGridArrivedRates (128 x 128)     */
+#define SPRAY_SIZE    0x1C
+#define SPRAY_X       0x04
+#define SPRAY_SCALE   0x18
+#define FOG_GRID      5        /* sprays per hexagon side: 0, 32, 64, 96, 128     */
+#define FOG_SCALE     1.5f     /* against walking's 1 (lid-speedrun 0.0.21, proven) */
+
+typedef void (*update_fn)(void *minimap, void *hud);
+typedef void (*add_fn)(void *minimap, int cell, int x, int y);
+static update_fn g_update_orig;
+static add_fn g_add_point;
+
+static int has_piece(const unsigned char *fn, size_t span, const struct piece *p)
+{
+    size_t i;
+    for (i = 0; i + p->size <= span; i++)
+        if (memcmp(fn + i, p->bytes, p->size) == 0)
+            return 1;
+    return 0;
+}
+
+/* Treasure Hunter or Spy on the fighter now (decal or class passive). */
+static int fog_wanted(const unsigned char *mm)
+{
+    const unsigned char *ui = read_ptr(mm + MM_UIMANAGER), *pawn;
+    uint32_t flags;
+
+    if (!ui || !g_flags_at || !(pawn = read_ptr(ui + UIMANAGER_PLAYERPAWN)))
+        return 0;
+    memcpy(&flags, pawn + g_flags_at, sizeof flags);
+    return (flags & (FLAG_SEARCHUP_ITEM | BIT_SPY)) != 0;
+}
+
+static void uncover(unsigned char *mm)
+{
+    unsigned char *cells = (unsigned char *)read_ptr(mm + MM_CELLS);
+    int32_t n = read32(mm + MM_CELLS + 8), i, k, x, y, done = 0, sprays = 0;
+    uint32_t flags;
+
+    memcpy(&flags, mm + MM_FLAGS, sizeof flags);
+    if (flags & 3)
+        return;             /* the next spray wipes the map for this floor: wait */
+    if (!cells || n <= 0 || n > 4096)
+        return;
+    /* A hexagon's grid corner (0, 0) lies outside the hexagon, so walking never
+     * marks it: 1 there means it was uncovered here, on this floor. */
+    for (i = 0; i < n; i++) {
+        unsigned char *c = cells + (size_t)i * CELL_SIZE;
+        float *rates = (float *)read_ptr(c + CELL_RATES);
+        int32_t rn = read32(c + CELL_RATES + 8);
+        if (!(c[CELL_FAR] & 1) && rates && rn > 0 && rn <= 0x10000 && rates[0] != 1.0f)
+            break;
+    }
+    if (i == n)
+        return;             /* all uncovered already */
+
+    for (i = 0; i < n; i++) {
+        unsigned char *c = cells + (size_t)i * CELL_SIZE;
+        float *rates = (float *)read_ptr(c + CELL_RATES);
+        int32_t rn = read32(c + CELL_RATES + 8);
+
+        if ((c[CELL_FAR] & 1) || !rates || rn <= 0 || rn > 0x10000)
+            continue;       /* scenery seen from afar, or no grid */
+        for (k = 0; k < rn; k++)
+            rates[k] = 1.0f;
+        done++;
+        for (y = 0; y < FOG_GRID; y++)
+            for (x = 0; x < FOG_GRID; x++) {
+                int sx = x * 128 / (FOG_GRID - 1), sy = y * 128 / (FOG_GRID - 1);
+                unsigned char *sd;
+                int32_t sn;
+
+                g_add_point(mm, i, sx, sy);
+                sd = (unsigned char *)read_ptr(mm + MM_SPRAYS);
+                sn = read32(mm + MM_SPRAYS + 8);
+                if (sd && sn > 0 && read32(sd + (size_t)(sn - 1) * SPRAY_SIZE + SPRAY_X) == sx) {
+                    float scale = FOG_SCALE;
+                    memcpy(sd + (size_t)(sn - 1) * SPRAY_SIZE + SPRAY_SCALE, &scale, sizeof scale);
+                    sprays++;
+                }
+            }
+    }
+    log_line("map fog: uncovered %d of %d hexagons (%d sprays)", done, n, sprays);
+}
+
+static void update_hook(void *minimap, void *hud)
+{
+    if (minimap && fog_wanted(minimap))
+        uncover(minimap);
+    g_update_orig(minimap, hud);
+}
+
+/* Find the paint call and its slot in the minimap's function table, check the
+ * layout, and send the slot through update_hook. */
+static void hook_fog(struct span text, struct span rdata)
+{
+    unsigned char *update = NULL, **slot = NULL, *add;
+    size_t i;
+    int n, slots = 0;
+    DWORD old;
+
+    if (!g_flags_at) {
+        log_line("map fog: left alone (the fighter flags were not found)");
+        return;
+    }
+    n = find_all(text, UPDATE_PATTERN, UPDATE_MASK, &update);
+    if (n != 1) {
+        log_line("map fog: the minimap's paint code found %d times (needs exactly 1) - left alone", n);
+        return;
+    }
+    for (i = 0; i + 8 <= rdata.size; i += 8) {
+        if (read_ptr(rdata.start + i) == update) {
+            slots++;
+            slot = (unsigned char **)(rdata.start + i);
+        }
+    }
+    if (slots != 1 || (unsigned char *)slot < rdata.start + UPDATE_SLOT) {
+        log_line("map fog: the paint code is in %d function tables (needs exactly 1) - left alone", slots);
+        return;
+    }
+    add = *(unsigned char **)((unsigned char *)slot - UPDATE_SLOT + ADD_SLOT);
+    if (add < text.start || add >= text.start + text.size - 0x100 ||
+        memcmp(add, ADD_START, sizeof ADD_START) != 0) {
+        log_line("map fog: the spray code is not where it should be - left alone");
+        return;
+    }
+    for (i = 0; i < sizeof UPDATE_PIECES / sizeof UPDATE_PIECES[0]; i++)
+        if (!has_piece(update, 0x400, &UPDATE_PIECES[i])) {
+            log_line("map fog: the paint code does not use %s as expected - left alone", UPDATE_PIECES[i].what);
+            return;
+        }
+    for (i = 0; i < sizeof ADD_PIECES / sizeof ADD_PIECES[0]; i++)
+        if (!has_piece(add, 0x100, &ADD_PIECES[i])) {
+            log_line("map fog: the spray code does not use %s as expected - left alone", ADD_PIECES[i].what);
+            return;
+        }
+    g_update_orig = (update_fn)(void *)update;
+    g_add_point = (add_fn)(void *)add;
+    if (!VirtualProtect(slot, sizeof *slot, PAGE_READWRITE, &old)) {
+        log_line("map fog: could not change the minimap's function table - left alone");
+        return;
+    }
+    *slot = (unsigned char *)(void *)update_hook;
+    VirtualProtect(slot, sizeof *slot, old, &old);
+    log_line("map fog: Treasure Hunter / Spy now uncover each floor's whole map (game+0x%llX)",
+             (unsigned long long)((unsigned char *)slot - (unsigned char *)GetModuleHandleW(NULL)));
 }
 
 /* ------------------------------------------------------ the changes */
@@ -376,6 +613,13 @@ static void patch_game(void)
         return;
     }
     g_checks[0].call = hit + MAP_CALL_AT;
+    g_flags_at = find_flag_word(text);
+    if (g_flags_at)
+        log_line("fighter flags: at fighter+0x%X (read from the HUD minimap code)", g_flags_at);
+    else
+        log_line("fighter flags: not found - the map reveals follow equipped decals only, "
+                 "class passives do not count");
+    hook_fog(text, rdata);
     for (i = 1; i < CHECK_COUNT; i++) {
         unsigned char want[6] = {0xFF, 0x90, 0, 0x10, 0, 0};
         unsigned char *from = g_checks[0].call + 6, *found = NULL;

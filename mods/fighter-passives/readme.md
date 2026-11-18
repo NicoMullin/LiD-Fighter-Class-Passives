@@ -28,7 +28,9 @@ And one piece goes in the game folder:
   is installed once and loads every plugin in that folder. The pause map only
   asks the save whether Treasure Hunter, Spy, PATROL DUTY, Iwazaru or Coyote
   Smith is equipped. The plugin makes it accept the passive too, in memory
-  only - the game's exe is not changed. Only the map reveals need it; every
+  only - the game's exe is not changed. With Treasure Hunter or Spy (decal or
+  passive) it also lifts the map's fog: each floor's whole map is uncovered as
+  you arrive, on the pause map and the minimap. Only the map reveals need it; every
   other passive works without it.
 
   The manager's **Get mods...** window puts it there (with the loader, if you

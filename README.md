@@ -11,8 +11,9 @@ used to be called LiD Fighter Mod.
   manager applies.
 - **lid-classpassives.dll** (`dll/`): a plugin for the
   [LiD Plugin Loader](https://github.com/NicoMullin/LiD-Plugin-Loader) that
-  makes the pause map accept those reveals. Only the map reveals need it; every
-  other passive works without it.
+  makes the pause map accept those reveals, and since 2.0.5 makes Treasure
+  Hunter and Spy (decal or passive) uncover each floor's whole map as you
+  arrive. Only the map reveals need it; every other passive works without it.
 
 ## Why the DLL is built by GitHub
 
